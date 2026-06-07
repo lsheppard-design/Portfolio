@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lili Sheppard ★ Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@400;600;700&family=Quicksand:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+/* ── RESET ── */
+*{box-sizing:border-box;margin:0;padding:0;}
+a{cursor:pointer;}
+
+/* ── VARIABLES ── */
+:root{
+  --rose-fond:#f5c0d5;
+  --rose-moyen:#e8a0b8;
+  --rose-fonce:#d07090;
+  --rouge-nav:#c03058;
+  --rouge-actif:#e8305a;
+  --rouge-fonce:#8b0030;
+  --rouge-tres-fonce:#5a0020;
+  --rose-liens:#d63060;
+  --rose-clair:#ffd6e4;
+  --rose-pale:#fff0f5;
+  --or-ovale:#ffe080;
+  --or-fonce:#ffd040;
+  --fond-livre:#fdf9f3;
+  --spirales-fond:#c02050;
+  --post-it-border:#d0d8e8;
+  --post-it-texte:#5a5a8a;
+  --cursive-color:#d63060;
+}
+
+/* ── BODY & FOND ── */
+body{
+  font-family:'Quicksand',Arial,sans-serif;
+  font-size:11px;
+  background:linear-gradient(135deg,#f8c0cc 0%,#eca0b0 50%,#e0809a 100%);
+  min-height:100vh;
+  padding:10px;
+  position:relative;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ctext x='5' y='22' font-size='14' fill='rgba(100,0,30,.11)'%3E✿%3C/text%3E%3Ctext x='30' y='13' font-size='9' fill='rgba(100,0,30,.08)'%3E★%3C/text%3E%3Ctext x='27' y='42' font-size='7' fill='rgba(100,0,30,.07)'%3E♥%3C/text%3E%3Ctext x='1' y='46' font-size='8' fill='rgba(100,0,30,.06)'%3E✦%3C/text%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+
+/* ── ÉTOILES FOND ── */
+.star-bg{
+  position:fixed;color:rgba(255,255,255,.5);font-size:14px;
+  animation:twinkle 2.5s ease-in-out infinite alternate;
+  pointer-events:none;z-index:0;
+}
+@keyframes twinkle{
+  from{opacity:.15;transform:scale(.75);}
+  to  {opacity:.9; transform:scale(1.2);}
+}
+/* Étoiles décoratives latérales */
+.deco-star{
+  position:fixed;pointer-events:none;z-index:2;
+  color:rgba(255,255,255,.55);
+  animation:twinkle 2.5s ease-in-out infinite alternate;
+}
+.deco-star-l1{left:1%;top:12%;font-size:22px;animation-delay:0s;}
+.deco-star-l2{left:2%;top:32%;font-size:14px;animation-delay:.6s;}
+.deco-star-l3{left:1.5%;top:55%;font-size:18px;animation-delay:1.1s;}
+.deco-star-l4{left:2.5%;top:74%;font-size:11px;animation-delay:1.8s;}
+.deco-star-r1{right:1%;top:8%;font-size:20px;animation-delay:.3s;}
+.deco-star-r2{right:2%;top:28%;font-size:16px;animation-delay:.9s;}
+.deco-star-r3{right:1.5%;top:50%;font-size:12px;animation-delay:1.4s;}
+.deco-star-r4{right:2%;top:70%;font-size:24px;animation-delay:.5s;}
+
+/* ── WRAPPER ── */
+.wrapper{
+  position:relative;z-index:1;
+  width:990px;margin:0 auto;
+  background:#fef0f5;
+  border:1px solid #e0a0b8;
+  box-shadow:0 0 0 3px #f599c2,0 10px 40px rgba(0,0,0,.3);
+  border-radius:4px 4px 0 0;
+  overflow:hidden;
+}
+
+/* ══════════════════════════
+   HEADER
+══════════════════════════ */
+.header{
+  height:80px;
+  background:
+    radial-gradient(ellipse at 50% 30%,rgba(255,255,255,.4) 0%,transparent 60%),
+    linear-gradient(90deg,#e0809a 0%,#eca0b0 20%,#f8c0cc 40%,#ffdde4 55%,#f8c0cc 70%,#eca0b0 85%,#e0809a 100%);
+  border-bottom:none;
+  display:flex;align-items:stretch;
+  position:relative;overflow:visible;
+  padding:0;
+}
+.header-logo-zone{
+  width:30%;min-width:140px;
+  background:transparent;
+  clip-path:none;
+  display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:flex-end;
+  padding:0 10px 10px 14px;
+}
+.header-star{display:none;}
+.header-logo-text{display:none;}
+.header-logo-sub{font-size:11px;color:#fff;font-style:italic;letter-spacing:.5px;margin-top:5px;}
+.header-deco-zone{
+  flex:1;
+  background:transparent;
+  border-left:none;
+  position:relative;overflow:visible;
+}
+.header-deco-zone::before{
+  content:'♥';position:absolute;
+  top:12px;right:20px;
+  font-size:22px;color:#cc3366;opacity:.7;
+}
+.header-deco-zone::after{
+  content:'★';position:absolute;
+  bottom:14px;right:52px;
+  font-size:18px;color:#cc3366;opacity:.6;
+}
+.header-deco-item{
+  position:absolute;
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(-3px 3px 6px rgba(0,0,0,.18));
+  animation:float 3.5s ease-in-out infinite;
+  pointer-events:none;
+  mix-blend-mode:screen;
+}
+.header-deco-mode{display:none;}
+.header-deco-deco{display:none;}
+.header-deco-bimbo{display:none;}
+.header-heart{display:none;}
+/* Sparkles header */
+.hdr-dust{
+  position:absolute;border-radius:50%;
+  background:#ffb0cc;filter:blur(3px);opacity:.7;
+  pointer-events:none;
+}
+.hdr-sparkle{
+  position:absolute;color:#ffddee;
+  font-style:normal;pointer-events:none;
+  animation:twinkle 2s ease-in-out infinite;
+}
+@keyframes heartPulse{
+  0%,100%{transform:translateY(-50%) scale(1);}
+  50%    {transform:translateY(-50%) scale(1.35);}
+}
+
+/* ══════════════════════════
+   NAV TABS
+══════════════════════════ */
+.nav-tabs{
+  background:linear-gradient(90deg,#e0809a 0%,#eca0b0 20%,#f8c0cc 40%,#ffdde4 55%,#f8c0cc 70%,#eca0b0 85%,#e0809a 100%);
+  padding:8px 8px 0;
+  min-height:44px;
+  display:flex;align-items:flex-end;gap:0;
+  border-bottom:2px solid #e0809a;
+  flex-wrap:nowrap;overflow-x:auto;
+  position:relative;z-index:10;
+}
+@keyframes vibrate{
+  0%,100%{transform:rotate(0deg);}
+  15%{transform:rotate(-12deg);}
+  30%{transform:rotate(12deg);}
+  45%{transform:rotate(-10deg);}
+  60%{transform:rotate(10deg);}
+  75%{transform:rotate(-6deg);}
+  90%{transform:rotate(6deg);}
+}
+.nav-phone-btn{
+  position:absolute;right:6px;bottom:-20px;
+  padding:0;
+  cursor:pointer;border:none;background:transparent;
+  width:68px;height:68px;
+  overflow:visible;z-index:20;
+}
+.nav-phone-btn img{
+  width:68px;height:68px;
+  object-fit:cover;
+  object-position:30% 28%;
+  animation:vibrate 0.55s ease-in-out infinite;
+  transform-origin:center center;
+  filter:drop-shadow(0 2px 5px rgba(0,0,0,.3));
+}
+.nav-phone-btn .notif-dot{
+  position:absolute;top:4px;right:6px;
+  width:10px;height:10px;
+  background:#ff2255;border-radius:50%;
+  border:2px solid #fce8f0;
+  animation:pulse-dot 1.2s ease-in-out infinite;
+}
+@keyframes pulse-dot{
+  0%,100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(1.3);opacity:.8;}
+}
+.nav-tab{
+  padding:5px 14px;
+  font-family:Arial,sans-serif;
+  font-size:15px;font-weight:900;
+  color:#8a0030;cursor:pointer;
+  border:2px solid transparent;border-bottom:none;
+  border-radius:5px 5px 0 0;
+  background:transparent;
+  transition:background .12s,color .12s;
+  white-space:nowrap;text-decoration:none;display:block;user-select:none;margin-right:2px;
+  -webkit-text-stroke:0.5px rgba(255,255,255,0.85);
+  text-shadow:-0.8px -0.8px 0 rgba(255,255,255,0.8),0.8px -0.8px 0 rgba(255,255,255,0.8),-0.8px 0.8px 0 rgba(255,255,255,0.8),0.8px 0.8px 0 rgba(255,255,255,0.8);
+}
+.nav-tab:hover{background:rgba(255,255,255,.15);color:#8a0030;}
+.nav-tab.active{
+  background:#fce8f0;
+  border:1px solid rgba(255,255,255,0.7);
+  border-bottom:1px solid #fce8f0;
+  color:#8a0030;font-weight:900;
+  margin-bottom:-2px;
+  -webkit-text-stroke:0;
+  text-shadow:none;
+  box-shadow:0 -3px 8px rgba(192,32,80,.18),2px 0 6px rgba(192,32,80,.1),-2px 0 6px rgba(192,32,80,.1);
+}
+
+/* ══════════════════════════
+   BODY AREA
+══════════════════════════ */
+.body-area{display:flex;min-height:490px;background:transparent;position:relative;}
+
+/* ══════════════════════════
+   SIDEBAR
+══════════════════════════ */
+.sidebar{
+  width:155px;min-width:155px;
+  background:linear-gradient(180deg,#e0809a 0%,#d07090 35%,#c06080 70%,#a05070 100%);
+  border-right:2px solid rgba(255,255,255,.08);
+  position:relative;padding-bottom:14px;
+}
+.sb-bow{position:absolute;top:7px;right:8px;font-size:22px;z-index:5;animation:bowBounce 3s ease-in-out infinite;}
+@keyframes bowBounce{
+  0%,100%{transform:rotate(-5deg);}
+  50%    {transform:rotate(5deg) scale(1.08);}
+}
+.sb-avatar-block{
+  margin:10px 8px 6px;background:rgba(255,255,255,.15);
+  border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,.3);
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+.sb-avatar-top{display:flex;align-items:center;gap:7px;margin-bottom:6px;}
+.sb-avatar-img{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,#ff85c2,#c02050);
+  border:2px solid var(--rose-clair);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;box-shadow:0 2px 5px rgba(0,0,0,.15);
+}
+.sb-avatar-label{font-family:'Pacifico',cursive;font-size:15px;color:#fff;line-height:1;}
+.sb-line{display:block;font-size:10px;color:rgba(255,255,255,.9);padding:1.5px 0;font-family:'Quicksand',sans-serif;}
+.sb-line.name {color:#fff;font-weight:700;font-size:11px;}
+.sb-line.gold {color:#ffccdd;text-decoration:underline;cursor:pointer;font-weight:700;}
+.sb-line.link {color:#ffccdd;text-decoration:underline;cursor:pointer;}
+.sb-line.link:hover{color:#fff;}
+.sb-bank-zone{padding:6px 8px;}
+.sb-bank-btn{
+  display:block;width:85%;margin:0 auto;
+  background:linear-gradient(180deg,#ffd700 0%,#cc9900 100%);
+  border:2px solid #997700;border-radius:8px;padding:7px 10px;
+  box-shadow:0 5px 0 #997700,0 6px 3px rgba(0,0,0,.3);color:#fff;
+  font-family:'Quicksand',sans-serif;font-size:11px;font-weight:900;
+  text-transform:uppercase;text-align:center;cursor:pointer;
+  letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,.4);
+  transition:transform .1s,box-shadow .1s;
+}
+.sb-bank-btn:hover {transform:translateY(-2px);box-shadow:0 7px 0 #775500,0 8px 3px rgba(0,0,0,.3);}
+.sb-bank-btn:active{transform:translateY(4px); box-shadow:0 1px 0 #775500;}
+.sb-heart{display:block;text-align:center;font-size:26px;color:#9b59b6;margin:4px 0;animation:heartPulse 1.8s ease-in-out infinite;}
+.sb-links{padding:0 4px;}
+.sb-link{
+  display:block;font-family:'Quicksand',sans-serif;
+  font-size:10px;font-weight:600;color:#8b0030;
+  padding:3.5px 8px;cursor:pointer;text-decoration:none;transition:background .1s;
+}
+.sb-link:hover{background:rgba(255,255,255,.5);}
+.sb-link.imp{color:#d63060;font-weight:700;}
+/* Sidebar formation */
+.sb-formation{padding:4px 6px;}
+.sb-formation-title{
+  font-family:'Caveat',cursive;font-size:14px;color:rgba(255,255,255,.9);
+  text-align:center;padding:3px 0;
+  border-top:1px solid rgba(255,255,255,.2);
+  border-bottom:1px solid rgba(255,255,255,.2);
+  margin-bottom:5px;
+}
+.sb-form-item{display:flex;gap:5px;padding:4px 2px;align-items:flex-start;}
+.sb-form-dot{color:rgba(255,200,220,.9);font-size:9px;flex-shrink:0;margin-top:2px;}
+.sb-form-text{font-family:'Quicksand',sans-serif;font-size:9px;color:rgba(255,255,255,.85);line-height:1.4;}
+.sb-form-name{font-weight:700;display:block;}
+.sb-form-school{display:block;opacity:.75;}
+/* Home summary page */
+.home-identity{text-align:center;margin-bottom:8px;}
+.home-name{font-family:'Pacifico',cursive;font-size:15px;color:#e0809a;display:block;margin-bottom:2px;}
+.home-sub{font-family:'Quicksand',sans-serif;font-size:10px;color:#8a2a4a;}
+.home-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}
+.home-stat-card{
+  background:linear-gradient(135deg,#e0809a 0%,#eca0b0 100%);
+  border-radius:10px;padding:9px 4px;text-align:center;color:#fff;
+  box-shadow:0 4px 12px rgba(192,32,80,.22),0 1px 3px rgba(0,0,0,.1);
+}
+.home-stat-card.clickable{cursor:pointer;transition:opacity .15s;}
+.home-stat-card.clickable:hover{opacity:.9;}
+.hsc-num{display:block;font-family:'Pacifico',cursive;font-size:22px;line-height:1.1;}
+.hsc-lbl{font-family:'Quicksand',sans-serif;font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;opacity:.9;}
+.hsc-sub{display:block;font-size:10px;color:rgba(255,255,255,.75);font-style:italic;margin-top:4px;}
+.home-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
+.home-tag{
+  background:rgba(212,66,106,.08);border:1.5px solid #eca0b0;
+  border-radius:20px;padding:3px 9px;
+  font-family:'Quicksand',sans-serif;font-size:10px;font-weight:700;color:#e0809a;
+}
+.home-tagline{
+  font-family:'Caveat',cursive;font-size:15px;color:#e0809a;
+  text-align:center;padding:8px 0;
+  border-top:1px dashed rgba(212,66,106,.2);
+}
+
+/* ══════════════════════════
+   MAIN
+══════════════════════════ */
+.main{flex:1;background:#fff5f7;display:flex;flex-direction:column;}
+
+/* Profile bar */
+.profile-bar{
+  background:#fef0f5;
+  border-bottom:1px solid #f0c8d8;
+  padding:7px 12px;
+  display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;
+}
+.pbar-avatar{
+  width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#ff85c2,#c02050);
+  border:2px solid #FFD700;
+  display:flex;align-items:center;justify-content:center;font-size:16px;
+  box-shadow:0 2px 6px rgba(255,20,147,.35);
+}
+.pbar-name{font-family:'Pacifico',cursive;font-size:13px;color:#c02050;line-height:1.2;}
+.pbar-label{font-size:9px;color:#aaa;font-weight:600;margin-bottom:2px;}
+.stats-row{display:flex;gap:14px;margin-left:6px;flex-wrap:wrap;}
+.stat-col{text-align:center;}
+.stat-lbl{display:block;font-size:9px;color:#888;font-weight:600;margin-bottom:1px;}
+.stat-val{display:block;font-size:12px;font-weight:700;color:var(--rouge-actif);margin-bottom:2px;}
+.stat-stars{color:#FF69B4;font-size:10px;letter-spacing:1px;}
+.s-grey{color:#ddd;}
+
+/* Zone centrale */
+.central{display:flex;padding:10px 10px 0;gap:10px;flex:1;min-height:310px;position:relative;}
+
+/* ── PERSONNAGE ── */
+.char-zone{
+  width:120px;min-width:120px;flex-shrink:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end;
+  padding-bottom:0;
+}
+.char-wrap{animation:float 3.5s ease-in-out infinite;position:relative;z-index:2;}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%    {transform:translateY(-7px);}
+}
+.char-img{height:350px;width:auto;display:block;}
+.char-placeholder{
+  width:108px;height:260px;background:#111;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;font-size:9px;padding:8px;line-height:1.5;
+}
+.podium{position:relative;margin-top:4px;z-index:1;text-align:center;}
+.podium-ellipse{
+  width:100px;height:20px;margin:0 auto;
+  background:linear-gradient(180deg,#fff0f5,#ffd6e4);
+  border-radius:50%;box-shadow:0 5px 0 #d4607a;
+}
+.podium-base{width:70px;height:8px;background:#d4607a;margin:0 auto;border-radius:0 0 4px 4px;}
+.podium-stars{
+  display:flex;justify-content:space-between;width:100px;margin:0 auto 2px;
+  color:#FFD700;font-size:11px;animation:twinkle 2s ease-in-out infinite alternate;
+}
+
+/* ══════════════════════════
+   LIVRE — STORYBOOK
+══════════════════════════ */
+.book-pills{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px;}
+.book-nav-pill{
+  background:linear-gradient(135deg,#e8305a,#c02050);
+  color:#fff;border-radius:14px;padding:3px 10px;
+  font-size:9px;font-weight:700;cursor:pointer;
+  font-family:'Quicksand',sans-serif;transition:opacity .15s;
+}
+.book-nav-pill:hover{opacity:.8;}
+.book-outer{
+  flex:1;display:flex;
+  background:var(--fond-livre);
+  border:1px solid #c0986a;
+  border-radius:3px 10px 10px 3px;
+  box-shadow:
+    4px 6px 28px rgba(100,50,20,.22),
+    0 4px 20px rgba(150,20,60,.2),
+    inset 0 1px 0 rgba(255,235,190,.6);
+  overflow:visible;
+}
+
+/* Reliure livre */
+.book-spine{
+  width:22px;min-width:22px;
+  background:linear-gradient(90deg,#620f2a,#a81840,#730f22);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:space-between;
+  padding:14px 0 14px;
+  border-radius:4px 0 0 4px;
+  flex-shrink:0;
+  box-shadow:inset -4px 0 8px rgba(0,0,0,.22),1px 0 4px rgba(0,0,0,.18);
+  position:relative;
+  overflow:hidden;
+}
+.book-spine::before{
+  content:'';
+  position:absolute;top:0;left:4px;bottom:0;width:1px;
+  background:rgba(255,215,100,.18);
+}
+.book-spine::after{
+  content:'';
+  position:absolute;top:0;right:4px;bottom:0;width:1px;
+  background:rgba(0,0,0,.2);
+}
+.spine-title{
+  writing-mode:vertical-rl;text-orientation:mixed;
+  font-family:'Pacifico',cursive;
+  font-size:7.5px;color:rgba(255,210,80,.7);
+  letter-spacing:2.5px;white-space:nowrap;
+  transform:rotate(180deg);
+}
+.spine-ring{
+  width:5px;height:5px;border-radius:50%;
+  background:rgba(255,215,100,.5);flex-shrink:0;
+}
+
+/* Page gauche — parchemin */
+.page-left{
+  flex:1;
+  background:linear-gradient(165deg,#fef9f3 0%,#fdf5ec 55%,#fbf0e6 100%);
+  padding:18px 16px;
+  position:relative;
+  transform-origin:left center;
+  min-height:250px;
+  overflow-y:visible;
+  border-left:1px solid rgba(180,130,60,.12);
+  box-shadow:inset 6px 0 14px rgba(0,0,0,.04);
+}
+/* Coin de page replié */
+.page-left::after{
+  content:'';
+  position:absolute;bottom:0;right:0;
+  width:22px;height:22px;
+  background:linear-gradient(225deg,#eaddca 50%,transparent 50%);
+  pointer-events:none;
+}
+
+/* Sections */
+.sect{display:none;}
+.sect.active{display:block;}
+
+/* ── Table des matières (index) ── */
+.btp-flourish{
+  text-align:center;font-size:9px;
+  color:rgba(192,32,80,.35);letter-spacing:7px;
+  margin-bottom:10px;
+}
+.btp-divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(160,80,100,.22),transparent);
+  margin:6px 0 12px;
+}
+
+/* Ovale — ex-libris */
+.book-oval{
+  background:linear-gradient(135deg,#fef4d0,#fde8a6,#fcd680);
+  border:2px solid #a07828;
+  border-radius:50px;padding:8px 20px;
+  text-align:center;display:inline-block;
+  margin-bottom:13px;
+  box-shadow:0 2px 6px rgba(140,90,10,.18),inset 0 1px 3px rgba(255,255,220,.5);
+}
+.book-oval-main{font-size:12px;font-weight:700;color:#5a3200;display:block;}
+.book-oval-sub {font-size:10px;color:#7a4e10;display:block;margin-top:1px;}
+
+/* Liens du livre — table des matières */
+.book-link{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Quicksand',sans-serif;
+  font-size:11px;font-weight:700;color:#7a2845;
+  padding:5.5px 4px;cursor:pointer;
+  text-decoration:none;transition:all .15s;
+  border-bottom:1px dotted rgba(180,100,120,.2);
+}
+.book-link:hover{transform:translateX(5px);color:#c02050;}
+.book-link:last-of-type{border-bottom:none;}
+.bl-dot{
+  width:9px;height:9px;border-radius:50%;
+  border:1.5px solid #b04060;flex-shrink:0;
+  background:rgba(255,200,220,.2);
+}
+.bl-dot.filled{background:#c02050;border-color:#c02050;}
+
+/* Sections content */
+.sect-back{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;font-weight:700;color:#d63060;
+  cursor:pointer;margin-bottom:12px;
+  padding:3px 8px;background:rgba(254,240,245,.9);
+  border-radius:10px;border:1px solid rgba(208,96,128,.4);
+  transition:background .1s;
+}
+.sect-back:hover{background:#ffe4f0;}
+.sect-title{
+  font-family:'Pacifico',cursive;font-size:16px;
+  color:#c02050;margin-bottom:12px;line-height:1.2;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(192,32,80,.18);
+}
+.sect-item{
+  display:flex;align-items:flex-start;gap:7px;
+  font-size:10px;color:#444;
+  padding:4px 0;border-bottom:1px dashed rgba(180,150,120,.2);
+  line-height:1.4;
+}
+.si-dot{width:8px;height:8px;border-radius:50%;border:2px solid #d63060;flex-shrink:0;margin-top:2px;}
+.si-title{font-weight:700;color:#6a0030;display:block;}
+.si-desc {color:#777;display:block;margin-top:1px;}
+.si-badge{
+  display:inline-block;background:#d63060;color:#fff;
+  font-size:8px;font-weight:700;
+  padding:1px 5px;border-radius:8px;margin-right:2px;margin-top:2px;
+}
+
+/* Grille outils */
+.tools-grid{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.tool-badge{background:#d63060;color:#fff;font-size:9px;font-weight:700;padding:3px 8px;border-radius:10px;}
+
+/* ── PROJETS — cartes détaillées ── */
+.pc-desc{font-size:9px;color:#666;line-height:1.5;margin-bottom:5px;padding:0 8px 0 44px;}
+.pc-kpi-row{display:flex;gap:5px;flex-wrap:wrap;margin:4px 0 5px;padding:0 8px 0 44px;}
+.pc-kpi{background:rgba(192,32,80,.08);border:1px solid rgba(192,32,80,.22);border-radius:5px;padding:2px 7px;font-size:8.5px;font-weight:700;color:#c02050;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:4px;padding:0 8px 8px 44px;}
+.pc-tag{background:#d63060;color:#fff;font-size:8px;font-weight:700;padding:2px 6px;border-radius:8px;}
+/* couleurs projets */
+.card-proj-data{border-color:#7090c8;background:linear-gradient(135deg,#f0f4ff,#e8eeff);}
+.card-proj-data .cc-icon{background:linear-gradient(135deg,#1040a0,#082878);}
+.card-proj-data .cc-dates{background:#1040a0;}
+.card-proj-mkt{border-color:#e8a0c0;background:linear-gradient(135deg,#fff5f8,#ffeef4);}
+.card-proj-mkt .cc-icon{background:linear-gradient(135deg,#e8305a,#c02050);}
+.card-proj-mkt .cc-dates{background:#e8305a;}
+.card-proj-res{border-color:#a0b8d8;background:linear-gradient(135deg,#f4f8fc,#ecf2f8);}
+.card-proj-res .cc-icon{background:linear-gradient(135deg,#3060a0,#184080);}
+.card-proj-res .cc-dates{background:#3060a0;}
+.card-proj-brand{border-color:#d8b880;background:linear-gradient(135deg,#fffaf0,#fff5e0);}
+.card-proj-brand .cc-icon{background:linear-gradient(135deg,#b07020,#7a4e00);}
+.card-proj-brand .cc-dates{background:#b07020;}
+
+/* ── CAMPAGNE — choix de carrière ── */
+.career-intro{
+  font-family:'Caveat',cursive;font-size:12.5px;color:#c02050;
+  text-align:center;margin-bottom:9px;line-height:1.4;
+}
+.career-card{
+  border:1.5px solid;border-radius:8px;margin-bottom:0;
+  overflow:hidden;cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+  box-shadow:0 3px 10px rgba(192,32,80,.15),0 1px 3px rgba(0,0,0,.08);
+}
+.career-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;
+}
+.career-grid>.career-card:last-child{
+  grid-column:1/-1;max-width:50%;margin:0 auto;
+}
+.career-card:hover{transform:translateX(4px);box-shadow:2px 4px 12px rgba(192,32,80,.12);}
+.cc-head{display:flex;align-items:center;gap:8px;padding:7px 8px;}
+.cc-icon{
+  width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:#fff;flex-shrink:0;
+  font-family:'Quicksand',sans-serif;letter-spacing:-.3px;
+}
+.cc-info{flex:1;min-width:0;}
+.cc-job{font-size:10px;font-weight:700;color:#4a0020;display:block;line-height:1.25;}
+.cc-co{font-size:8.5px;color:#999;display:block;margin-top:1px;}
+.cc-dates{font-size:7.5px;font-weight:700;padding:2px 5px;border-radius:5px;color:#fff;flex-shrink:0;white-space:nowrap;align-self:flex-start;margin-top:2px;}
+.cc-missions{padding:0 8px 8px 44px;display:none;}
+.cc-missions.open{display:block;}
+.cc-mission{font-size:9px;color:#555;padding:2px 0;line-height:1.4;display:flex;gap:5px;}
+.cc-mission::before{content:'→';color:#d63060;flex-shrink:0;}
+.cc-toggle{font-size:8px;color:#c02050;padding:1px 6px 5px 44px;font-family:'Caveat',cursive;font-size:11px;display:block;}
+/* couleurs par métier */
+.card-consult{border-color:#b8a9e8;background:rgba(184,169,232,.12);}
+.card-consult .cc-icon{background:#b8a9e8;}
+.card-consult .cc-dates{background:rgba(184,169,232,.8);color:#fff;}
+.card-mkt{border-color:#c9a0dc;background:rgba(201,160,220,.12);}
+.card-mkt .cc-icon{background:#c9a0dc;}
+.card-mkt .cc-dates{background:rgba(201,160,220,.8);color:#fff;}
+.card-food{border-color:#e0a0c8;background:rgba(224,160,200,.12);}
+.card-food .cc-icon{background:#e0a0c8;}
+.card-food .cc-dates{background:rgba(224,160,200,.8);color:#fff;}
+.card-retail{border-color:#e8a0b8;background:rgba(232,160,184,.12);}
+.card-retail .cc-icon{background:#e8a0b8;}
+.card-retail .cc-dates{background:rgba(232,160,184,.8);color:#fff;}
+.card-green{border-color:#f0a0b0;background:rgba(240,160,176,.12);}
+.card-green .cc-icon{background:#f0a0b0;}
+.card-green .cc-dates{background:rgba(240,160,176,.8);color:#fff;}
+/* badge "En cours" animé */
+.cc-dates.live{background:#e8305a;animation:livePulse 1.8s ease-in-out infinite;}
+@keyframes livePulse{0%,100%{opacity:1;}50%{opacity:.65;}}
+/* Section associations */
+.career-assoc{margin-top:11px;border-top:1px dashed rgba(192,32,80,.2);padding-top:9px;}
+.career-assoc-title{font-family:'Pacifico',cursive;font-size:12px;color:#c02050;margin-bottom:7px;display:block;}
+.assoc-item{display:flex;align-items:flex-start;gap:7px;padding:3.5px 0;border-bottom:1px dashed rgba(180,150,120,.15);}
+.assoc-item:last-child{border-bottom:none;}
+.assoc-dot{width:7px;height:7px;border-radius:50%;background:#d63060;flex-shrink:0;margin-top:3px;}
+.assoc-name{font-size:9.5px;font-weight:700;color:#4a0020;display:block;}
+.assoc-desc{font-size:8.5px;color:#888;display:block;margin-top:1px;}
+
+/* ── COMPÉTENCES avec cœurs ── */
+.skill-heart-row{
+  display:flex;align-items:center;gap:8px;
+  padding:5.5px 3px;
+  border-bottom:1px dashed rgba(200,120,140,.2);
+}
+.skill-heart-row:last-child{border-bottom:none;}
+.skill-h-icon{font-size:14px;flex-shrink:0;width:20px;text-align:center;}
+.skill-h-name{flex:1;font-size:10px;font-weight:700;color:#6a0030;}
+.skill-h-hearts{font-size:13px;letter-spacing:.5px;flex-shrink:0;}
+.skill-h-empty{opacity:.18;}
+
+/* Page droite */
+.page-right{
+  width:130px;min-width:130px;
+  background:linear-gradient(180deg,#fef9f3,#fdf5ec);
+  border-left:1px solid rgba(180,130,60,.18);
+  padding:14px 12px;
+  position:relative;overflow:hidden;
+  border-radius:0 8px 8px 0;
+}
+.pr-cursive{
+  font-family:'Caveat',cursive;font-size:22px;font-weight:700;
+  color:var(--cursive-color);opacity:.55;
+  transform:rotate(-8deg);
+  position:absolute;top:12px;right:14px;
+  pointer-events:none;white-space:nowrap;
+}
+.post-it{
+  background:#fef0f5;border:1px solid #ddd0c0;
+  border-radius:4px;padding:10px;margin-bottom:12px;
+  box-shadow:2px 3px 8px rgba(150,100,50,.1);
+  cursor:pointer;position:relative;
+  transition:transform .15s,box-shadow .15s;
+}
+.post-it:hover{transform:translateY(-2px);box-shadow:3px 6px 12px rgba(150,100,50,.15);}
+.pit-title{font-size:12px;font-weight:700;color:var(--post-it-texte);text-align:center;display:block;margin-bottom:3px;}
+.pit-sub  {font-size:9px;color:#aaa;text-align:center;display:block;}
+.pit-cursive{
+  font-family:'Caveat',cursive;font-size:14px;
+  color:var(--cursive-color);opacity:.55;
+  transform:rotate(-6deg);
+  position:absolute;bottom:5px;right:6px;
+  font-weight:600;pointer-events:none;
+}
+
+/* Lien bas du livre */
+.book-footer{
+  padding:6px 12px 8px;border-top:1px solid rgba(180,130,60,.15);
+  text-align:right;font-size:10px;
+}
+.book-footer a{color:#c03058;text-decoration:underline;cursor:pointer;font-weight:600;}
+.book-footer a:hover{color:#e8305a;}
+
+/* ── GRILLE COMPÉTENCES (dans sect-formation) ── */
+.home-skills-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:4px 5px;
+  margin-top:8px;padding-top:8px;
+  border-top:1px dashed rgba(212,66,106,.2);
+}
+.hsg-header{
+  grid-column:1/-1;
+  font-family:'Caveat',cursive;font-size:13px;color:#8a0030;
+  margin-bottom:2px;letter-spacing:.4px;
+}
+.hsg-item{
+  display:flex;flex-direction:column;align-items:flex-start;
+  padding:3px 5px 4px;
+  background:rgba(255,215,232,.38);
+  border:1px solid rgba(192,32,80,.1);
+  border-radius:5px;
+}
+.hsg-name{font-size:8px;font-weight:700;color:#6a0030;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;margin-bottom:1px;}
+.hsg-hearts{font-size:9.5px;letter-spacing:.3px;}
+.hsg-empty{opacity:.18;}
+
+/* ── POLAROIDS ── */
+.polaroid-strip{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;
+  width:108px;min-width:108px;flex-shrink:0;
+  padding-top:6px;
+}
+.polaroid{
+  background:#fef0f5;
+  padding:6px 6px 22px;
+  border:1px solid #e0d8d0;
+  box-shadow:2px 3px 10px rgba(0,0,0,.16);
+  width:90px;flex-shrink:0;
+}
+.polaroid:nth-child(1){transform:rotate(-5deg);}
+.polaroid:nth-child(2){transform:rotate(3.5deg);}
+.polaroid:nth-child(3){transform:rotate(-2deg);}
+.pol-photo{
+  width:78px;height:60px;
+  background:linear-gradient(135deg,#ffd6e8,#ffecf4,#ffd6e8);
+  border:1px solid #f0c0d4;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:rgba(192,32,80,.25);
+}
+.pol-caption{
+  font-family:'Caveat',cursive;
+  font-size:12px;font-weight:600;
+  color:#c02050;text-align:center;
+  margin-top:4px;display:block;
+}
+
+/* ══════════════════════════
+   FOOTER
+══════════════════════════ */
+.footer{
+  background:#f0f0f0;border-top:1px solid #ddd;
+  padding:7px 10px;text-align:center;
+  font-size:9px;color:#888;font-family:'Quicksand',sans-serif;
+}
+.footer a{color:#888;text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer-links{margin-top:2px;}
+
+/* ══════════════════════════
+   SUPÉRETTE SCENE
+══════════════════════════ */
+.sup-scene{
+  width:100%;height:580px;position:relative;overflow:hidden;
+  background-image:url('assets/superette/superette-bg.png');
+  background-size:cover;background-position:center;
+}
+.sup-prod-wrap{
+  position:absolute;cursor:pointer;z-index:6;
+  display:flex;flex-direction:column;align-items:center;
+  transform:translateX(-50%);
+  transition:transform .2s,filter .2s;
+  filter:drop-shadow(-5px 5px 10px rgba(0,0,0,.4)) drop-shadow(-2px 2px 4px rgba(0,0,0,.2));
+}
+.sup-prod-wrap:hover{
+  transform:translateX(-50%) scale(1.1) translateY(-6px);
+  filter:drop-shadow(0 10px 18px rgba(200,80,120,.6)) drop-shadow(0 4px 6px rgba(0,0,0,.25));
+}
+.sup-prod-wrap img{height:95px;width:auto;display:block;}
+.sup-prod-lbl{
+  font-family:'Caveat',cursive;font-size:11px;
+  color:#c02050;font-weight:700;white-space:nowrap;
+  opacity:0;transition:opacity .2s;
+  margin-top:0;line-height:1;pointer-events:none;
+  text-shadow:0 1px 3px rgba(255,255,255,.9);
+}
+.sup-prod-wrap:hover .sup-prod-lbl{opacity:1;}
+
+/* ── MODAL SUPÉRETTE ── */
+.sup-modal-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.48);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  z-index:3000;align-items:center;justify-content:center;
+}
+.sup-modal-overlay.open{display:flex;}
+.sup-modal{
+  background:#fef0f5;
+  border:2.5px solid #c03058;border-radius:16px;
+  padding:22px 24px;max-width:460px;width:90%;
+  position:relative;display:flex;gap:18px;align-items:flex-start;
+  animation:popIn .25s cubic-bezier(.34,1.56,.64,1);
+  box-shadow:0 12px 48px rgba(0,0,0,.28);
+}
+.sup-modal-img{
+  width:120px;flex-shrink:0;object-fit:contain;
+  filter:drop-shadow(2px 4px 10px rgba(0,0,0,.15));
+}
+.sup-modal-content{flex:1;min-width:0;}
+.sup-modal-title{
+  font-family:'Pacifico',cursive;font-size:16px;
+  color:#c02050;margin-bottom:8px;line-height:1.3;
+}
+.sup-modal-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
+.sup-modal-tag{
+  background:#d63060;color:#fff;
+  font-size:8.5px;font-weight:700;padding:3px 8px;border-radius:10px;
+}
+.sup-modal-desc{font-size:11px;color:#555;line-height:1.65;margin-bottom:14px;}
+.sup-modal-btn{
+  background:linear-gradient(180deg,#e8305a,#c02050);
+  border:2px solid #8b0030;border-radius:14px;
+  padding:8px 18px;color:#fff;
+  font-family:'Quicksand',sans-serif;font-size:11px;font-weight:700;
+  cursor:pointer;box-shadow:0 3px 0 #5a0020;
+  transition:transform .1s,box-shadow .1s;
+}
+.sup-modal-btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #5a0020;}
+.sup-modal-close{
+  position:absolute;top:10px;right:12px;
+  background:none;border:none;font-size:20px;
+  color:#c03058;cursor:pointer;line-height:1;transition:transform .1s;
+}
+.sup-modal-close:hover{transform:scale(1.25);}
+
+/* ── SPARKLE ── */
+.sparkle{
+  position:fixed;pointer-events:none;z-index:9999;
+  animation:spark 1.2s ease-out forwards;
+}
+@keyframes spark{
+  0%  {opacity:1;transform:translateY(0) scale(1) rotate(0deg);}
+  100%{opacity:0;transform:translateY(-60px) scale(.2) rotate(30deg);}
+}
+
+/* ══════════════════════════
+   SUPÉRETTE VIEW
+══════════════════════════ */
+#home-view{display:flex;flex-direction:column;flex:1;}
+#superette-view{display:none;flex-direction:column;flex:1;background:transparent;overflow:hidden;}
+
+.sup-topbar{
+  background:linear-gradient(180deg,#fff,#f8f2ec);
+  border-bottom:2px solid #d8c8b0;padding:4px 12px;
+  display:flex;align-items:center;justify-content:space-between;flex-shrink:0;
+}
+.sup-basket-btn{position:relative;cursor:default;display:inline-flex;align-items:flex-start;font-size:22px;}
+.sup-basket-badge{
+  position:absolute;top:-4px;right:-10px;
+  background:#e82020;color:#fff;font-size:9px;font-weight:700;
+  width:16px;height:16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.sup-title-zone{text-align:center;}
+.sup-title{font-family:'Pacifico',cursive;font-size:24px;color:#d02050;border-bottom:3px solid #2a7820;padding-bottom:1px;display:inline-block;}
+.sup-niv{font-family:'Quicksand',sans-serif;font-size:10px;font-weight:700;color:#999;}
+.sup-controls{background:#e4dfd6;border-bottom:1px solid #c4b898;padding:4px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.sup-select{font-family:'Quicksand',sans-serif;font-size:10px;font-weight:700;color:#444;border:2px solid #b09060;border-radius:10px;padding:3px 8px;background:#fff;cursor:pointer;outline:none;}
+.s-room{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
+.s-ceiling{height:40px;flex-shrink:0;background:linear-gradient(180deg,#cecece,#bcbcbc);border-bottom:3px solid #8a8a8a;display:flex;align-items:center;padding:0 80px;gap:120px;}
+.s-light{width:32px;height:18px;background:radial-gradient(ellipse at center,#fffde8 0%,#f8f080 55%,#c8c040 100%);border-radius:50% 50% 65% 65%;box-shadow:0 0 14px rgba(255,255,140,.75),0 2px 5px rgba(0,0,0,.25);}
+.s-wall{flex:1;background:#ece7df;display:flex;overflow:hidden;min-height:0;}
+.s-left-section{width:268px;min-width:268px;flex-shrink:0;display:flex;flex-direction:column;padding:8px 6px 0 8px;}
+.chalk-board-wrap{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:8px;}
+.chalk-string{width:2px;height:14px;background:#555;margin-left:44px;}
+.chalk-board{width:152px;background:#1e3018;border:7px solid #5a3505;border-radius:2px;padding:8px 7px;box-shadow:3px 4px 10px rgba(0,0,0,.45);}
+.chalk-board-ttl{font-family:'Caveat',cursive;font-size:12px;color:rgba(255,255,255,.82);text-align:center;font-weight:700;border-bottom:1px solid rgba(255,255,255,.25);margin-bottom:5px;padding-bottom:4px;}
+.chalk-item{font-family:'Caveat',cursive;font-size:10.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:4px;margin-bottom:3px;line-height:1.25;}
+.s-wall-deco{display:flex;gap:5px;margin-bottom:8px;padding-left:2px;}
+.s-poster{width:50px;height:58px;border-radius:2px;border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(135deg,#fdf5e0,#f5e8cc);box-shadow:1px 2px 4px rgba(0,0,0,.12);}
+.s-poster:nth-child(1){transform:rotate(-3deg);}
+.s-poster:nth-child(2){transform:rotate(2deg);}
+.s-poster:nth-child(3){transform:rotate(-1.5deg);}
+.produce-stand{flex:1;display:flex;flex-direction:column;justify-content:flex-end;}
+.pstand-header{background:linear-gradient(180deg,#7a4010,#5a2800);border:3px solid #3a1800;border-bottom:none;border-radius:3px 3px 0 0;padding:4px 6px;text-align:center;}
+.pstand-label{font-family:'Caveat',cursive;font-size:12px;color:rgba(255,255,255,.85);font-weight:700;}
+.pstand-row{background:linear-gradient(180deg,#9a5010,#7a3800);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 1px,transparent 1px,transparent 36px);display:flex;gap:2px;padding:6px 4px 4px;border-left:3px solid #3a1800;border-right:3px solid #3a1800;}
+.pstand-divider{height:8px;background:linear-gradient(180deg,#5a2800,#3a1400);border-left:3px solid #2a1000;border-right:3px solid #2a1000;box-shadow:0 3px 6px rgba(0,0,0,.45);}
+.pstand-row-2{background:linear-gradient(180deg,#8a4810,#6a3200);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 1px,transparent 1px,transparent 36px);display:flex;gap:2px;padding:6px 4px 4px;border-left:3px solid #3a1800;border-right:3px solid #3a1800;}
+.pstand-base{height:10px;background:linear-gradient(180deg,#4a2000,#2a0e00);border:3px solid #1a0800;border-top:none;border-radius:0 0 3px 3px;box-shadow:0 5px 8px rgba(0,0,0,.42);}
+.produce-item{flex:1;text-align:center;cursor:pointer;min-width:0;}
+.prod-img{width:46px;height:36px;margin:0 auto 2px;background:rgba(255,255,255,.1);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:19px;}
+.prod-price-row{display:flex;align-items:center;justify-content:center;gap:2px;}
+.prod-price{font-size:8px;font-weight:700;color:#fff;background:rgba(0,0,0,.38);padding:1px 3px;border-radius:2px;}
+.prod-btn{width:16px;height:16px;background:#FF69B4;border:none;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:8px;cursor:pointer;color:#fff;flex-shrink:0;transition:background .1s;}
+.prod-btn:hover{background:#d63060;}
+.pstand-crate-row{display:flex;padding:4px 6px 0;}
+.wood-crate{width:52px;height:38px;background:linear-gradient(180deg,#8a5a20,#6a3a00);border:3px solid #4a2800;border-radius:2px;position:relative;}
+.wood-crate::before{content:'';position:absolute;top:50%;left:0;right:0;height:2px;background:#4a2800;transform:translateY(-50%);}
+.wood-crate::after{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:#4a2800;transform:translateX(-50%);}
+.s-right-section{flex:1;display:flex;flex-direction:column;padding:6px 8px 0 4px;position:relative;}
+.s-starburst{position:absolute;top:2px;right:4px;width:64px;height:64px;background:#e82020;color:#fff;display:flex;align-items:center;justify-content:center;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);font-size:8.5px;font-weight:700;font-family:'Quicksand',sans-serif;text-align:center;line-height:1.25;animation:starPulse 2s ease-in-out infinite;z-index:10;}
+@keyframes starPulse{0%,100%{transform:scale(1) rotate(0deg);}50%{transform:scale(1.1) rotate(6deg);}}
+.metal-shelf-unit{flex:1;display:flex;flex-direction:column;background:#b4b4b4;border:3px solid #565656;border-radius:2px;overflow:hidden;box-shadow:3px 4px 10px rgba(0,0,0,.22);}
+.shelf-cat-row{background:linear-gradient(180deg,#d4d4d4,#c0c0c0);border-bottom:3px solid #565656;padding:5px 8px;display:flex;gap:5px;align-items:center;flex-shrink:0;}
+.shelf-cat-icon{width:27px;height:27px;border-radius:50%;border:2px solid #585858;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;transition:transform .1s;flex-shrink:0;}
+.shelf-cat-icon:hover{transform:scale(1.12);}
+.shelf-cat-icon.active{box-shadow:0 0 0 2px #fff,0 0 0 4px #e82020;}
+.ci-all  {background:linear-gradient(135deg,#FFD700,#FFA500);}
+.ci-data {background:linear-gradient(135deg,#4a90d9,#1a60b0);}
+.ci-mkt  {background:linear-gradient(135deg,#FF85C2,#d03060);}
+.ci-res  {background:linear-gradient(135deg,#6a8db8,#2a4a80);}
+.ci-brand{background:linear-gradient(135deg,#c8a060,#8a6020);}
+.shelf-cat-lbl{font-size:9px;font-weight:700;color:#555;margin-left:auto;font-family:'Quicksand',sans-serif;}
+.msf-body{flex:1;display:flex;background:#b8b8b8;min-height:0;}
+.msf-post{width:13px;flex-shrink:0;background:linear-gradient(90deg,#6a6a6a,#b0b0b0,#6a6a6a);box-shadow:inset 0 0 4px rgba(0,0,0,.2);}
+.msf-inner{flex:1;display:flex;flex-direction:column;background:#c2c2c2;}
+.msf-shelf-row{flex:1;display:flex;gap:8px;padding:8px 10px 0;align-items:flex-end;min-height:0;}
+.msf-plank{height:9px;flex-shrink:0;background:linear-gradient(180deg,#dedede,#8c8c8c);border-top:2px solid #eeeeee;margin:0 10px;box-shadow:0 4px 6px rgba(0,0,0,.32);}
+.shelf-product{flex:1;min-width:0;background:linear-gradient(180deg,#fff,#f8f4f0);border:2px solid #9e9e9e;border-radius:4px;overflow:hidden;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:1px 2px 5px rgba(0,0,0,.14);display:flex;flex-direction:column;}
+.shelf-product:hover{transform:translateY(-4px);box-shadow:2px 7px 14px rgba(0,0,0,.2);}
+.shelf-prod-top{height:72px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:28px;position:relative;}
+.bg-data {background:linear-gradient(135deg,#182850,#1060b0);}
+.bg-mkt  {background:linear-gradient(135deg,#7a0040,#d03060);}
+.bg-res  {background:linear-gradient(135deg,#182850,#2a5090);}
+.bg-brand{background:linear-gradient(135deg,#7a5010,#b88030);}
+.shelf-prod-new-badge{position:absolute;top:4px;left:4px;background:#e82020;color:#fff;font-size:7px;font-weight:700;padding:2px 4px;border-radius:2px;font-family:'Quicksand',sans-serif;}
+.shelf-prod-body{padding:5px 6px;flex:1;}
+.shelf-prod-title{font-size:9px;font-weight:700;color:#222;display:block;line-height:1.3;margin-bottom:2px;}
+.shelf-prod-tech{font-size:7.5px;color:#999;display:block;margin-bottom:4px;line-height:1.3;}
+.shelf-prod-foot{display:flex;align-items:center;justify-content:space-between;}
+.shelf-prod-price{font-size:10px;font-weight:700;color:#222;}
+.shelf-prod-btn{width:20px;height:20px;background:#FF69B4;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;cursor:pointer;color:#fff;flex-shrink:0;transition:background .1s;}
+.shelf-prod-btn:hover{background:#d03060;}
+.shelf-prod-btn.added{background:#27ae60;}
+.sup-bimbo{height:88%;width:auto;flex-shrink:0;align-self:flex-end;margin-left:-10px;pointer-events:none;display:block;}
+.sup-bimbo-emoji{font-size:42px;text-align:center;display:block;animation:float 3.5s ease-in-out infinite;padding-bottom:4px;}
+.s-floor{height:48px;flex-shrink:0;background:repeating-linear-gradient(90deg,rgba(130,110,70,.35) 0,rgba(130,110,70,.35) 2px,transparent 2px,transparent 48px),repeating-linear-gradient(180deg,rgba(130,110,70,.3) 0,rgba(130,110,70,.3) 2px,transparent 2px,transparent 48px),linear-gradient(180deg,#ddd5be,#ccc4a8);}
+.sup-bottom{background:#e4dfd6;border-top:1px solid #c4b898;padding:5px 10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.sup-search-btn{position:absolute;left:10px;background:#fff;border:2px solid #b09060;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer;transition:background .1s;}
+.sup-search-btn:hover{background:#ffe;}
+.sup-page{font-family:'Quicksand',sans-serif;font-size:11px;font-weight:700;color:#666;background:#fff;border:2px solid #b09060;border-radius:10px;padding:3px 12px;cursor:pointer;}
+
+/* ── POPUP ── */
+.s-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.46);z-index:1000;align-items:center;justify-content:center;}
+.s-overlay.open{display:flex;}
+.s-popup{background:#fff8fa;border:3px solid #c03058;border-radius:12px;padding:22px;max-width:430px;width:90%;position:relative;animation:popIn .25s cubic-bezier(.34,1.56,.64,1);box-shadow:0 10px 40px rgba(0,0,0,.28);}
+@keyframes popIn{from{transform:scale(.7);opacity:0;}to{transform:scale(1);opacity:1;}}
+.sp-close{position:absolute;top:10px;right:12px;background:none;border:none;font-size:20px;color:#c03058;cursor:pointer;line-height:1;transition:transform .1s;}
+.sp-close:hover{transform:scale(1.25);}
+.pop-visual{height:88px;display:flex;align-items:center;justify-content:center;font-size:42px;border-radius:8px;margin-bottom:12px;}
+.pop-vis-data {background:linear-gradient(135deg,#182850,#1060b0);}
+.pop-vis-mkt  {background:linear-gradient(135deg,#7a0040,#d03060);}
+.pop-vis-res  {background:linear-gradient(135deg,#182850,#2a5090);}
+.pop-vis-brand{background:linear-gradient(135deg,#7a5010,#b88030);}
+.pop-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:8px;}
+.pop-featured-badge{background:#e82020;color:#fff;font-size:7px;font-weight:700;padding:2px 6px;border-radius:3px;font-family:'Quicksand',sans-serif;white-space:nowrap;flex-shrink:0;}
+.sp-popup-title{font-family:'Pacifico',cursive;font-size:17px;color:#c02050;line-height:1.3;}
+.sp-popup-desc{font-size:11px;color:#555;line-height:1.6;text-align:center;margin-bottom:12px;}
+.pop-meta{background:rgba(254,240,245,.8);border-radius:6px;padding:7px 10px;margin-bottom:10px;border:1px solid #f0c8d8;}
+.pop-meta-line{font-size:10px;color:#555;margin-bottom:3px;line-height:1.4;}
+.pop-meta-line:last-child{margin-bottom:0;}
+.sp-popup-tech{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:14px;}
+.sp-popup-badge{background:#d63060;color:#fff;font-size:9px;font-weight:700;padding:3px 9px;border-radius:10px;}
+.sp-popup-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid #f0c8d8;}
+.sp-popup-price{font-family:'Pacifico',cursive;font-size:20px;color:#c02050;}
+.sp-popup-cta{background:linear-gradient(180deg,#e8305a,#c02050);border:2px solid #8b0030;border-radius:14px;padding:8px 16px;color:#fff;font-family:'Quicksand',sans-serif;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 3px 0 #5a0020;transition:transform .1s,box-shadow .1s;}
+.sp-popup-cta:hover{transform:translateY(-2px);box-shadow:0 5px 0 #5a0020;}
+/* Bouton classement sidebar */
+.sb-classement-btn{
+  display:block;width:85%;margin:6px auto 4px;
+  background:linear-gradient(180deg,#ffaa00 0%,#dd7700 100%);
+  border:2px solid #aa5500;border-radius:8px;
+  box-shadow:0 5px 0 #aa5500,0 6px 3px rgba(0,0,0,.3);color:#fff;
+  font-family:'Quicksand',sans-serif;font-size:11px;font-weight:900;
+  text-transform:uppercase;text-align:center;cursor:pointer;
+  padding:7px 10px;letter-spacing:.5px;
+  text-shadow:0 1px 2px rgba(0,0,0,.4);
+  transition:transform .1s,box-shadow .1s;
+}
+.sb-classement-btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 #883300,0 8px 3px rgba(0,0,0,.3);}
+.sb-classement-btn:active{transform:translateY(4px);box-shadow:0 1px 0 #883300;}
+/* Icônes bas de sidebar */
+.sb-nav-icons{
+  display:flex;justify-content:center;gap:6px;
+  padding:10px 8px 4px;margin-top:auto;
+}
+.sb-nav-icon{
+  width:30px;height:30px;border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;cursor:pointer;
+  transition:background .15s;flex-shrink:0;
+}
+.sb-nav-icon:hover{background:rgba(255,255,255,.35);}
+/* Polaroids décoratifs */
+.deco-polaroid{
+  position:absolute;
+  width:130px;background:#fff;
+  border:3px solid #eee;border-radius:2px;
+  box-shadow:2px 4px 12px rgba(0,0,0,.2);
+  padding:8px 8px 25px;
+  pointer-events:none;z-index:1;
+}
+.deco-polaroid-photo{
+  width:110px;height:90px;background:#e0e0e0;
+  margin:0 auto;
+}
+.deco-polaroid-caption{
+  font-family:'Caveat',cursive;font-size:11px;
+  color:#555;text-align:center;margin-top:5px;
+}
+/* Chat mystère */
+.deco-chat{
+  position:absolute;
+  width:60px;height:60px;border-radius:50%;
+  background:#ffaacc;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;color:#fff;
+  opacity:.8;pointer-events:none;z-index:1;
+  animation:float-deco 5s ease-in-out infinite;
+}
+/* Cœurs décoratifs */
+.deco-heart-float{
+  position:absolute;
+  color:#ff6688;opacity:.5;font-size:20px;
+  pointer-events:none;z-index:1;
+  animation:heartPulse 3s ease-in-out infinite;
+}
+/* Décorations overlay */
+@keyframes float-deco{
+  0%,100%{transform:translateY(0px) rotate(0deg);}
+  50%    {transform:translateY(-8px) rotate(5deg);}
+}
+.deco-overlay{
+  position:fixed;pointer-events:none;
+  mix-blend-mode:screen;opacity:.6;z-index:999;
+}
+.deco-sparkle-large{top:5%;right:2%;width:120px;animation:float-deco 4s ease-in-out infinite;}
+.deco-sparkle-small{bottom:15%;left:3%;width:80px;animation:float-deco 4s ease-in-out infinite 1s;}
+.deco-heart-glow{top:40%;left:1%;width:100px;animation:float-deco 6s ease-in-out infinite;}
+.deco-hearts-neon{top:8%;left:5%;width:90px;}
+.deco-globe{bottom:8%;right:3%;width:80px;}
+
+/* ══════════════════════════
+   RÉPONDEUR MODAL
+══════════════════════════ */
+.rep-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.45);backdrop-filter:blur(4px);
+  z-index:5000;align-items:center;justify-content:center;
+}
+.rep-overlay.open{display:flex;}
+.rep-modal{
+  width:340px;max-width:94vw;
+  background:linear-gradient(160deg,#fce8f0 0%,#f8c0cc 60%,#eca0b0 100%);
+  border:3px solid #c02050;border-radius:20px;
+  box-shadow:0 12px 48px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.6);
+  display:flex;flex-direction:column;overflow:hidden;
+  animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
+}
+.rep-header{
+  background:linear-gradient(90deg,#c02050,#e0809a);
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:2px solid #8b0030;
+}
+.rep-title{
+  font-family:'Pacifico',cursive;font-size:13px;color:#fff;
+  text-shadow:0 1px 3px rgba(0,0,0,.3);
+}
+.rep-close{
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);
+  border-radius:50%;width:22px;height:22px;color:#fff;
+  font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .1s;
+}
+.rep-close:hover{background:rgba(255,255,255,.4);}
+.rep-screen{
+  flex:1;padding:12px;display:flex;flex-direction:column;gap:8px;
+  overflow-y:auto;max-height:320px;min-height:180px;
+  background:rgba(255,240,245,.55);
+}
+.rep-msg{display:flex;max-width:82%;}
+.rep-msg span{
+  font-family:'Quicksand',sans-serif;font-size:11px;line-height:1.5;
+  padding:7px 11px;border-radius:14px;display:block;
+}
+.rep-msg-bot{align-self:flex-start;}
+.rep-msg-bot span{
+  background:#fff;color:#8a0030;
+  border:1.5px solid #e0a0b8;
+  border-radius:4px 14px 14px 14px;
+}
+.rep-msg-user{align-self:flex-end;margin-left:auto;}
+.rep-msg-user span{
+  background:linear-gradient(135deg,#c02050,#e0607a);
+  color:#fff;border-radius:14px 4px 14px 14px;
+}
+.rep-input-row{
+  display:flex;gap:6px;padding:10px 12px;
+  border-top:1.5px solid rgba(192,32,80,.2);
+  background:rgba(255,240,245,.7);
+}
+.rep-input{
+  flex:1;border:1.5px solid #e0a0b8;border-radius:20px;
+  padding:6px 12px;font-family:'Quicksand',sans-serif;font-size:11px;
+  background:#fff;color:#333;outline:none;
+  transition:border-color .15s;
+}
+.rep-input:focus{border-color:#c02050;}
+.rep-send{
+  background:linear-gradient(180deg,#e8305a,#c02050);
+  border:none;border-radius:50%;width:32px;height:32px;
+  color:#fff;font-size:14px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 0 #8b0030;transition:transform .1s;flex-shrink:0;
+}
+.rep-send:hover{transform:scale(1.1);}
+</style>
+</head>
+<body>
+
+<span class="star-bg" style="top:4%;left:2%;animation-delay:0s;font-size:16px">★</span>
+<span class="star-bg" style="top:10%;left:95%;animation-delay:.7s;font-size:12px">✦</span>
+<span class="star-bg" style="top:38%;left:1%;animation-delay:1.4s;font-size:10px">★</span>
+<span class="star-bg" style="top:58%;left:97%;animation-delay:.3s;font-size:14px">✧</span>
+<span class="star-bg" style="top:78%;left:2%;animation-delay:1s;font-size:12px">★</span>
+<span class="star-bg" style="top:90%;left:94%;animation-delay:.5s;font-size:16px">✦</span>
+<span class="star-bg" style="top:22%;left:50%;animation-delay:1.8s;font-size:9px">★</span>
+<span class="star-bg" style="top:65%;left:48%;animation-delay:1.2s;font-size:8px">✿</span>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-logo-zone" style="position:relative;">
+      <img src="assets/logo-mabimbo.png" alt="Logo Ma Bimbo" style="height:160px;width:auto;mix-blend-mode:screen;object-fit:contain;position:absolute;z-index:2;top:2px;left:-95px;pointer-events:none;">
+      <!-- Poudre rose -->
+      <span class="hdr-dust" style="width:10px;height:10px;top:8px;left:80px;"></span>
+      <span class="hdr-dust" style="width:7px;height:7px;top:20px;left:110px;opacity:.5;"></span>
+      <span class="hdr-dust" style="width:12px;height:12px;top:5px;left:140px;"></span>
+      <span class="hdr-dust" style="width:6px;height:6px;top:35px;left:95px;opacity:.6;"></span>
+      <span class="hdr-dust" style="width:9px;height:9px;top:15px;left:55px;opacity:.4;"></span>
+      <!-- Étoiles scintillantes -->
+      <span class="hdr-sparkle" style="top:2px;left:135px;font-size:18px;animation-delay:0s;">✦</span>
+      <span class="hdr-sparkle" style="top:30px;left:155px;font-size:14px;animation-delay:.7s;">✦</span>
+      <span class="hdr-sparkle" style="top:50px;left:120px;font-size:20px;animation-delay:1.3s;">✦</span>
+    </div>
+    <div class="header-deco-zone">
+      <img class="header-deco-item" src="assets/deco/heart-glow.png" alt="" style="height:70px;top:-4px;left:4%;animation-delay:0s;">
+      <img class="header-deco-item" src="assets/deco/sparkle-large.png" alt="" style="height:46px;top:38px;left:19%;animation-delay:.6s;">
+      <img class="header-deco-item" src="assets/deco/heart-neon.png" alt="" style="height:75px;top:-6px;left:38%;animation-delay:1.1s;">
+      <img class="header-deco-item" src="assets/deco/globe-pixel.png" alt="" style="height:42px;top:48px;left:57%;animation-delay:1.7s;">
+      <img class="header-deco-item" src="assets/deco/sparkle-small.png" alt="" style="height:38px;top:10px;left:74%;animation-delay:2.3s;">
+      <span style="position:absolute;font-size:24px;top:52px;left:88%;animation:twinkle 2s ease-in-out infinite;color:rgba(255,255,255,.75);filter:drop-shadow(0 0 4px #ffaacc);pointer-events:none;">✦</span>
+    </div>
+  </div>
+
+  <!-- NAV TABS — 5 onglets -->
+  <div class="nav-tabs">
+    <a class="nav-tab active" onclick="goTab(this,'formation')">Accueil</a>
+    <a class="nav-tab" onclick="openSuperette(this)">La Supérette</a>
+    <a class="nav-tab" onclick="goTab(this,'experiences')">Campagne</a>
+    <a class="nav-tab" onclick="goTab(this,'contact')">La Boîte aux Lettres</a>
+    <button class="nav-phone-btn" onclick="openRepondeur()" title="Répondeur de Lili">
+      <img src="assets/superette/telephone.png" alt="Répondeur de Lili">
+      <span class="notif-dot"></span>
+    </button>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-area">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sb-avatar-block">
+        <div class="sb-avatar-top">
+          <div class="sb-avatar-img">♥</div>
+          <span class="sb-avatar-label">Ma bimbo</span>
+        </div>
+        <span class="sb-line name">Lili Sheppard</span>
+        <span class="sb-line">MSc Architecte IA · En cours</span>
+        <span class="sb-line gold" onclick="turnPage('experiences')">6 ans d'expérience</span>
+        <span class="sb-line">Eugenia School · Paris 10</span>
+        <span class="sb-line link" onclick="turnPage('competences')">Marketing : 95 %</span>
+        <span class="sb-line link" onclick="turnPage('competences')">Data : 75 %</span>
+      </div>
+      <button class="sb-classement-btn">★ CLASSEMENT</button>
+      <div class="sb-bank-zone">
+        <button class="sb-bank-btn" onclick="turnPage('contact')">★ LA BANQUE</button>
+      </div>
+      <div class="sb-formation">
+        <div class="sb-formation-title">Ma Formation</div>
+        <div class="sb-form-item">
+          <span class="sb-form-dot">●</span>
+          <span class="sb-form-text">
+            <span class="sb-form-name">MSc Architecte IA</span>
+            <span class="sb-form-school">Eugenia School · 2025–2027 · En cours</span>
+          </span>
+        </div>
+        <div class="sb-form-item">
+          <span class="sb-form-dot">●</span>
+          <span class="sb-form-text">
+            <span class="sb-form-name">Mastère Marketing Digital</span>
+            <span class="sb-form-school">PPA Business School · 2023–2025</span>
+          </span>
+        </div>
+        <div class="sb-form-item">
+          <span class="sb-form-dot">●</span>
+          <span class="sb-form-text">
+            <span class="sb-form-name">Bachelor Marketing</span>
+            <span class="sb-form-school">PPA Business School · 2020–2023</span>
+          </span>
+        </div>
+        <div class="sb-form-item">
+          <span class="sb-form-dot">●</span>
+          <span class="sb-form-text">
+            <span class="sb-form-name">Bac STMG</span>
+            <span class="sb-form-school">École Diagonale · 2018–2020</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+    <!-- HOME VIEW -->
+    <div id="home-view">
+
+      <!-- Zone centrale -->
+      <div class="central">
+
+        <!-- Personnage -->
+        <div class="char-zone">
+          <div class="char-wrap">
+            <img class="char-img" src="assets/bimbo.png" alt="Personnage Lili Sheppard - Ma Bimbo">
+          </div>
+          <div class="podium">
+            <div class="podium-stars"><span>★</span><span>★</span></div>
+            <div class="podium-ellipse"></div>
+            <div class="podium-base"></div>
+          </div>
+        </div>
+
+        <!-- LIVRE OUVERT — storybook -->
+        <div class="book-outer">
+
+          <!-- Reliure -->
+          <div class="book-spine">
+            <div class="spine-title">Portfolio</div>
+            <div class="spine-ring"></div>
+            <div class="spine-ring"></div>
+            <div class="spine-ring"></div>
+            <div class="spine-ring"></div>
+            <div class="spine-ring"></div>
+          </div>
+
+          <!-- PAGE GAUCHE -->
+          <div class="page-left" id="bookPage">
+
+            <!-- Raccourcis navigation -->
+            <!-- INDEX — table des matières -->
+            <div id="sect-index" class="sect">
+              <div class="btp-flourish">✦ ✦ ✦</div>
+              <div class="book-oval">
+                <span class="book-oval-main">6 ans d'expérience</span>
+                <span class="book-oval-sub">MSc Business Analytics</span>
+              </div>
+              <div class="btp-divider"></div>
+              <a class="book-link" onclick="turnPage('competences')"><div class="bl-dot"></div>Voir mes compétences</a>
+              <a class="book-link" onclick="turnPage('projets')"><div class="bl-dot"></div>Voir mes projets</a>
+              <a class="book-link" onclick="turnPage('experiences')"><div class="bl-dot"></div>Mes expériences pro</a>
+              <a class="book-link" onclick="turnPage('formation')"><div class="bl-dot"></div>Ma formation</a>
+              <a class="book-link" onclick="turnPage('outils')"><div class="bl-dot"></div>Mes outils &amp; technos</a>
+              <a class="book-link" onclick="turnPage('contact')"><div class="bl-dot"></div>Me contacter</a>
+              <a class="book-link" href="#"><div class="bl-dot filled"></div>Télécharger mon CV</a>
+            </div>
+
+            <!-- ACCUEIL (défaut : Ma Chambre) -->
+            <div id="sect-formation" class="sect active">
+              <div class="home-identity">
+                <span class="home-name">Lili Sheppard</span>
+                <span class="home-sub">MSc Architecte IA · Alternance 4j / 1j</span>
+              </div>
+              <div class="home-stats-grid">
+                <div class="home-stat-card clickable" onclick="openSuperette(document.querySelector('.nav-tab:nth-child(2)'))">
+                  <span class="hsc-num">5</span><span class="hsc-lbl">★ projets</span>
+                  <span class="hsc-sub">voir dans La Supérette</span>
+                </div>
+                <div class="home-stat-card clickable" onclick="goTab(document.querySelector('.nav-tab:nth-child(3)'),'experiences')">
+                  <span class="hsc-num">5</span><span class="hsc-lbl">★ expériences</span>
+                  <span class="hsc-sub">voir dans Campagne</span>
+                </div>
+                <div class="home-stat-card clickable" onclick="document.querySelector('.home-skills-float').scrollIntoView({behavior:'smooth'})">
+                  <span class="hsc-num">2</span><span class="hsc-lbl">★ Masters</span>
+                  <span class="hsc-sub">voir mes compétences</span>
+                </div>
+                <div class="home-stat-card">
+                  <span class="hsc-num">6</span><span class="hsc-lbl">★ ans d'exp.</span>
+                </div>
+              </div>
+              <div class="home-tags">
+                <span class="home-tag">Python</span>
+                <span class="home-tag">SQL</span>
+                <span class="home-tag">Marketing Digital</span>
+                <span class="home-tag">Product</span>
+                <span class="home-tag">IA</span>
+              </div>
+              <div class="home-tagline">"Marketing Digital × Intelligence Artificielle"</div>
+              <div class="home-skills-grid">
+                <div class="hsg-header">✦ Compétences</div>
+                <div class="hsg-item"><span class="hsg-name">Python</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">SQL</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">PowerBI</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">Tableau</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">Salesforce</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">GA4</span><span class="hsg-hearts"><span style="color:#d63060">♥♥♥</span><span class="hsg-empty" style="color:#d63060">♥♥</span></span></div>
+                <div class="hsg-item"><span class="hsg-name">Mailchimp</span><span class="hsg-hearts" style="color:#d63060">♥♥♥♥♥</span></div>
+                <div class="hsg-item"><span class="hsg-name">Canva</span><span class="hsg-hearts" style="color:#d63060">♥♥♥♥♥</span></div>
+                <div class="hsg-item"><span class="hsg-name">Product Mkt</span><span class="hsg-hearts" style="color:#d63060">♥♥♥♥♥</span></div>
+              </div>
+            </div>
+
+            <!-- PROJETS (La Supérette) -->
+            <div id="sect-projets" class="sect">
+              <button class="sect-back" onclick="turnPage('index')">← Retour</button>
+              <div class="sect-title">Mes Projets</div>
+              <div class="career-intro">5 projets · clique pour explorer les détails !</div>
+
+              <!-- Projet 1 : Hackathon TIS -->
+              <div class="career-card card-proj-data" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon" style="font-size:8px">TIS</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Talent Intelligence System ★</span>
+                    <span class="cc-co">Hackathon Mirakl × Eugenia · CPO</span>
+                  </div>
+                  <span class="cc-dates">2026</span>
+                </div>
+                <span class="cc-toggle">♥ voir le projet</span>
+                <div class="cc-missions">
+                  <div class="pc-desc">Sourcing automatique de talents tech : scraping LinkedIn, GitHub &amp; Kaggle, scoring IA 0–100, veille sur 12 concurrents. 10× moins cher que Greenhouse.</div>
+                  <div class="pc-kpi-row">
+                    <span class="pc-kpi">7 293 profils</span>
+                    <span class="pc-kpi">Score 0–100</span>
+                    <span class="pc-kpi">126 €/mois</span>
+                    <span class="pc-kpi">CPO · équipe de 7</span>
+                  </div>
+                  <div class="pc-tags">
+                    <span class="pc-tag">n8n</span><span class="pc-tag">Phantombuster</span><span class="pc-tag">OpenAI</span><span class="pc-tag">Python</span><span class="pc-tag">Scraping</span><span class="pc-tag">ML</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projet 2 : FBI -->
+              <div class="career-card card-proj-data" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon" style="font-size:8px">FBI</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Analyse Profils Fugitifs FBI</span>
+                    <span class="cc-co">Data Science · Web Scraping</span>
+                  </div>
+                  <span class="cc-dates">2024</span>
+                </div>
+                <span class="cc-toggle">♥ voir le projet</span>
+                <div class="cc-missions">
+                  <div class="pc-desc">Scraping de 439 profils de fugitifs FBI via Crawl4AI. Développement d'un chatbot FBI Criminal Profiler basé sur LLM pour l'analyse criminologique.</div>
+                  <div class="pc-kpi-row">
+                    <span class="pc-kpi">439 profils</span>
+                    <span class="pc-kpi">Chatbot LLM</span>
+                    <span class="pc-kpi">Crawl4AI</span>
+                  </div>
+                  <div class="pc-tags">
+                    <span class="pc-tag">Python</span><span class="pc-tag">Crawl4AI</span><span class="pc-tag">LLM</span><span class="pc-tag">Web Scraping</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projet 3 : Michi -->
+              <div class="career-card card-proj-mkt" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">Mi</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Michi — Le Match qui Fait du Bien</span>
+                    <span class="cc-co">Marketing Digital · Startup</span>
+                  </div>
+                  <span class="cc-dates">2024</span>
+                </div>
+                <span class="cc-toggle">♥ voir le projet</span>
+                <div class="cc-missions">
+                  <div class="pc-desc">Pitch deck complet d'une startup de matching patient-psychologue par IA. Étude de marché, positionnement et stratégie go-to-market.</div>
+                  <div class="pc-kpi-row">
+                    <span class="pc-kpi">Pitch deck complet</span>
+                    <span class="pc-kpi">Go-to-market</span>
+                    <span class="pc-kpi">IA santé</span>
+                  </div>
+                  <div class="pc-tags">
+                    <span class="pc-tag">Marketing Digital</span><span class="pc-tag">Étude de marché</span><span class="pc-tag">Startup</span><span class="pc-tag">IA</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projet 4 : Influence -->
+              <div class="career-card card-proj-res" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon" style="font-size:8px">IDE</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Influence, Défiance &amp; Engagement</span>
+                    <span class="cc-co">Communication Politique · Mémoire</span>
+                  </div>
+                  <span class="cc-dates">2023</span>
+                </div>
+                <span class="cc-toggle">♥ voir le projet</span>
+                <div class="cc-missions">
+                  <div class="pc-desc">Mémoire de recherche sur la Gen Z et la communication politique. Analyse de la défiance institutionnelle via questionnaire et analyse statistique.</div>
+                  <div class="pc-kpi-row">
+                    <span class="pc-kpi">147 répondants</span>
+                    <span class="pc-kpi">Quali + Quanti</span>
+                    <span class="pc-kpi">Analyse statistique</span>
+                  </div>
+                  <div class="pc-tags">
+                    <span class="pc-tag">Recherche</span><span class="pc-tag">Analyse statistique</span><span class="pc-tag">Com. Politique</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projet 5 : Converse -->
+              <div class="career-card card-proj-brand" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">CV</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Converse Remastered</span>
+                    <span class="cc-co">Brand Strategy · Audit Marketing</span>
+                  </div>
+                  <span class="cc-dates">2023</span>
+                </div>
+                <span class="cc-toggle">♥ voir le projet</span>
+                <div class="cc-missions">
+                  <div class="pc-desc">Audit marketing complet + stratégie de reconquête de la Gen Z pour Converse. Méthodologie mixte : questionnaire quantitatif et interviews qualitatives approfondies.</div>
+                  <div class="pc-kpi-row">
+                    <span class="pc-kpi">206 répondants</span>
+                    <span class="pc-kpi">8 interviews</span>
+                    <span class="pc-kpi">Audit complet</span>
+                  </div>
+                  <div class="pc-tags">
+                    <span class="pc-tag">Brand Strategy</span><span class="pc-tag">Audit Marketing</span><span class="pc-tag">Quali</span><span class="pc-tag">Quanti</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- EXPÉRIENCES (Campagne) -->
+            <div id="sect-experiences" class="sect">
+              <div class="sect-title">Campagne</div>
+              <div class="career-intro">Ta bimbo a choisi sa carrière ★<br>clique sur un métier pour voir ses missions !</div>
+
+              <div class="career-grid">
+              <!-- Métier 1 : Licter -->
+              <div class="career-card card-consult" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">CS</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Consultante</span>
+                    <span class="cc-co">Licter · Cabinet de consulting</span>
+                  </div>
+                  <span class="cc-dates live">Sep 2025 – aujourd'hui</span>
+                </div>
+                <span class="cc-toggle">♥ voir les missions</span>
+                <div class="cc-missions">
+                  <div class="cc-mission">Cabinet de consulting</div>
+                </div>
+              </div>
+
+              <!-- Métier 2 : Syrona -->
+              <div class="career-card card-mkt" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">PM</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Junior Product Marketing Specialist</span>
+                    <span class="cc-co">Syrona · Paris</span>
+                  </div>
+                  <span class="cc-dates">Sep 2024 – Sep 2025</span>
+                </div>
+                <span class="cc-toggle">♥ voir les missions</span>
+                <div class="cc-missions">
+                  <div class="cc-mission">Veille concurrentielle proactive et permanente du marché</div>
+                  <div class="cc-mission">Rédaction et diffusion de la newsletter interne "revue du bench"</div>
+                  <div class="cc-mission">Gestion des battle cards</div>
+                  <div class="cc-mission">Formation des nouveaux collaborateurs et des supports internes</div>
+                  <div class="cc-mission">Co-construction des contenus produit avec l'équipe Produit et Com</div>
+                  <div class="cc-mission">Gestion de l'espace de démo, scénarios par personas et secteurs</div>
+                </div>
+              </div>
+
+              <!-- Métier 3 : T&T Foods -->
+              <div class="career-card card-food" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">DP</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Cheffe de projet digital junior</span>
+                    <span class="cc-co">T&amp;T Foods · Lognes</span>
+                  </div>
+                  <span class="cc-dates">Nov 2023 – Juil 2024</span>
+                </div>
+                <span class="cc-toggle">♥ voir les missions</span>
+                <div class="cc-missions">
+                  <div class="cc-mission">Correction du catalogue imprimé et digital des produits</div>
+                  <div class="cc-mission">Emailing hebdomadaire (Mailchimp)</div>
+                  <div class="cc-mission">Organisation de la présence au salon Sirha (Lyon)</div>
+                  <div class="cc-mission">Mise en place d'un plan marketing pour la marque Yakult</div>
+                  <div class="cc-mission">Création des fiches promotionnelles mensuelles</div>
+                </div>
+              </div>
+
+              <!-- Métier 4 : Carrefour -->
+              <div class="career-card card-retail" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">CM</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Assistante Category Manager</span>
+                    <span class="cc-co">Carrefour · Massy</span>
+                  </div>
+                  <span class="cc-dates">Sep 2022 – Sep 2023</span>
+                </div>
+                <span class="cc-toggle">♥ voir les missions</span>
+                <div class="cc-missions">
+                  <div class="cc-mission">Création du chemin de fer entre le marketing et les Category Managers</div>
+                  <div class="cc-mission">Mise à jour et publication de la note hebdo d'analyse concurrence</div>
+                  <div class="cc-mission">Mise en place de la salle de collection</div>
+                  <div class="cc-mission">Création de la note de collection</div>
+                  <div class="cc-mission">Collaboration au dossier de mise en marché</div>
+                </div>
+              </div>
+
+              <!-- Métier 5 : Biocoop -->
+              <div class="career-card card-green" onclick="toggleMissions(this)">
+                <div class="cc-head">
+                  <div class="cc-icon">VD</div>
+                  <div class="cc-info">
+                    <span class="cc-job">Vendeuse</span>
+                    <span class="cc-co">Biocoop</span>
+                  </div>
+                  <span class="cc-dates">Avr 2020 – Août 2022</span>
+                </div>
+                <span class="cc-toggle">♥ voir les missions</span>
+                <div class="cc-missions">
+                  <div class="cc-mission">Conseil et vente en magasin, encaissement, mise en rayon</div>
+                </div>
+              </div>
+              </div><!-- /career-grid -->
+
+              <!-- ASSOCIATIONS & BÉNÉVOLAT -->
+              <div class="career-assoc">
+                <span class="career-assoc-title">★ Associations &amp; Bénévolat</span>
+                <div class="assoc-item">
+                  <div class="assoc-dot"></div>
+                  <div>
+                    <span class="assoc-name">Restos du Cœur</span>
+                    <span class="assoc-desc">Collecte de nourriture en supermarchés · 2016–2017</span>
+                  </div>
+                </div>
+                <div class="assoc-item">
+                  <div class="assoc-dot"></div>
+                  <div>
+                    <span class="assoc-name">Maison de retraite ORPEA</span>
+                    <span class="assoc-desc">Animations hebdomadaires pour personnes âgées · 2016–2017</span>
+                  </div>
+                </div>
+                <div class="assoc-item">
+                  <div class="assoc-dot"></div>
+                  <div>
+                    <span class="assoc-name">École élémentaire Cavé · Paris 18</span>
+                    <span class="assoc-desc">Soutien scolaire hebdomadaire &amp; aide aux devoirs · 2017–2018</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- COMPÉTENCES (Beauté) — avec cœurs 🩷 -->
+            <div id="sect-competences" class="sect">
+              <div class="sect-title">Mes Compétences</div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Python</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">SQL</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">PowerBI</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Tableau</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Salesforce</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">GA4</span>
+                <span class="skill-h-hearts"><span style="color:#d63060">♥♥♥</span><span class="skill-h-empty" style="color:#d63060">♥♥</span></span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Mailchimp</span>
+                <span class="skill-h-hearts" style="color:#d63060">♥♥♥♥♥</span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Canva</span>
+                <span class="skill-h-hearts" style="color:#d63060">♥♥♥♥♥</span>
+              </div>
+              <div class="skill-heart-row">
+                <span class="skill-h-name">Product Marketing</span>
+                <span class="skill-h-hearts" style="color:#d63060">♥♥♥♥♥</span>
+              </div>
+            </div>
+
+            <!-- OUTILS -->
+            <div id="sect-outils" class="sect">
+              <button class="sect-back" onclick="turnPage('index')">← Retour</button>
+              <div class="sect-title">Mes Outils</div>
+              <div class="tools-grid">
+                <span class="tool-badge">Python</span><span class="tool-badge">SQL</span>
+                <span class="tool-badge">PowerBI</span><span class="tool-badge">Dataiku</span>
+                <span class="tool-badge">Tableau</span><span class="tool-badge">GA4</span>
+                <span class="tool-badge">Salesforce</span><span class="tool-badge">Mailchimp</span>
+                <span class="tool-badge">Canva</span><span class="tool-badge">Excel</span>
+                <span class="tool-badge">Prestashop</span><span class="tool-badge">PowerPoint</span>
+              </div>
+              <div style="margin-top:12px">
+                <div class="sect-item"><div class="si-dot"></div><div><span class="si-title">Langues</span><span class="si-desc">Français natif · Anglais 65% · Espagnol 60% · Chinois notions</span></div></div>
+                <div class="sect-item"><div class="si-dot"></div><div><span class="si-title">Centres d'intérêt</span><span class="si-desc">Voile · Ski · Course à pied · Dessin</span></div></div>
+              </div>
+            </div>
+
+            <!-- CONTACT (La Boîte aux Lettres) -->
+            <div id="sect-contact" class="sect">
+              <div class="sect-title">Me Contacter</div>
+              <div class="sect-item"><div class="si-dot"></div><div><span class="si-title">Email</span><span class="si-desc"><a href="mailto:Lilishepp@gmail.com" style="color:#d63060">Lilishepp@gmail.com</a></span></div></div>
+              <div class="sect-item"><div class="si-dot"></div><div><span class="si-title">Téléphone</span><span class="si-desc">06 51 43 18 59</span></div></div>
+              <div class="sect-item" style="cursor:pointer;" onclick="window.open('https://www.linkedin.com/in/lili-sheppard-0801921a6/','_blank')"><div class="si-dot filled"></div><div><span class="si-title">LinkedIn</span><span class="si-desc" style="color:#c02050;text-decoration:underline;">linkedin.com/in/lili-sheppard</span></div></div>
+              <div class="sect-item"><div class="si-dot"></div><div><span class="si-title">Localisation</span><span class="si-desc">Paris, France · Île-de-France</span></div></div>
+              <div style="margin-top:10px;padding:8px 10px;background:rgba(255,215,0,.1);border-radius:6px;border:1px solid rgba(255,215,0,.4)">
+                <span style="font-size:10px;color:#8b0030;font-weight:600;line-height:1.6;display:block">
+                  ★ MSc Architecte IA en cours · Eugenia School (2025–2027)<br>
+                  Alternance 4j / 1j · Business Analytics · Marketing Digital
+                </span>
+              </div>
+            </div>
+
+          </div><!-- /page-left -->
+
+        </div><!-- /book-outer -->
+
+        <!-- Décorations flottantes -->
+        <img src="assets/deco/heart-glow.png" alt="" style="position:absolute;right:4%;top:38%;height:100px;width:auto;object-fit:contain;pointer-events:none;animation:float 4s ease-in-out infinite;mix-blend-mode:screen;opacity:.9;">
+        <img src="assets/deco/sparkle-large.png" alt="" style="position:absolute;right:20%;top:44%;height:90px;width:auto;object-fit:contain;pointer-events:none;animation:float 5s ease-in-out infinite .7s;mix-blend-mode:screen;opacity:.85;">
+        <img src="assets/deco/heart-neon.png" alt="" style="position:absolute;right:37%;top:42%;height:85px;width:auto;object-fit:contain;pointer-events:none;animation:float 3.8s ease-in-out infinite 1.4s;mix-blend-mode:screen;opacity:.85;">
+        <div class="deco-heart-float" style="right:5%;top:30%;">♥</div>
+        <div class="deco-heart-float" style="right:8%;bottom:25%;">♥</div>
+        <div class="deco-heart-float" style="right:3%;top:60%;">♥</div>
+      </div><!-- /central -->
+
+      <div class="book-footer">
+        <a href="https://www.linkedin.com/in/lili-sheppard-0801921a6/" target="_blank" rel="noopener">Voir mon LinkedIn »</a>
+      </div>
+
+    </div><!-- /home-view -->
+
+    <!-- SUPÉRETTE VIEW — fond étagère + produits PNG -->
+    <div id="superette-view">
+      <div class="sup-scene">
+
+        <!-- Graffiti mur -->
+        <div style="position:absolute;left:50%;top:5%;transform:translateX(-50%) rotate(-4deg);pointer-events:none;z-index:2;white-space:nowrap;font-family:'Permanent Marker',cursive;font-size:28px;color:#d63060;opacity:.82;text-shadow:0 0 8px rgba(214,48,96,.5),2px 2px 0 rgba(214,48,96,.2),-1px -1px 0 rgba(255,180,210,.4),3px 0 10px rgba(214,48,96,.3);letter-spacing:2px;">superette des projets</div>
+
+        <!-- Dossier FBI (planche haute gauche) -->
+        <div class="sup-prod-wrap" style="left:43%;bottom:337px;" onclick="openSupModal('fbi')">
+          <img src="assets/superette/folder.png" alt="Analyse FBI">
+          <span class="sup-prod-lbl">Analyse FBI</span>
+        </div>
+
+        <!-- Flacon Michi (planche haute droite) -->
+        <div class="sup-prod-wrap" style="left:53%;bottom:325px;" onclick="openSupModal('michi')">
+          <img src="assets/superette/medecine.png" alt="Pitch Michi">
+          <span class="sup-prod-lbl">Pitch Michi</span>
+        </div>
+
+        <!-- Boîte Converse (planche milieu droite) -->
+        <div class="sup-prod-wrap" style="left:53%;bottom:230px;" onclick="openSupModal('converse')">
+          <img src="assets/superette/shoebox.png" alt="Converse" style="height:120px;">
+          <span class="sup-prod-lbl">Converse</span>
+        </div>
+
+        <!-- Magazine Mémoire (planche basse gauche) -->
+        <div class="sup-prod-wrap" style="left:43%;bottom:180px;" onclick="openSupModal('memoire')">
+          <img src="assets/superette/magazine.png" alt="Mémoire Z">
+          <span class="sup-prod-lbl">Mémoire Pol.</span>
+        </div>
+
+        <!-- Loupe Mirakl (planche basse droite) -->
+        <div class="sup-prod-wrap" style="left:53%;bottom:172px;" onclick="openSupModal('mirakl')">
+          <img src="assets/superette/magnifying-glass.png" alt="Hackathon Mirakl">
+          <span class="sup-prod-lbl">Hackathon Mirakl</span>
+        </div>
+
+        <!-- Posters côté plante (gauche) -->
+        <img src="assets/superette/astrokitty.png" alt=""
+             style="position:absolute;left:9%;top:3%;height:170px;width:auto;object-fit:contain;z-index:6;pointer-events:none;mix-blend-mode:multiply;transform:rotate(-2deg);filter:drop-shadow(-5px 5px 10px rgba(0,0,0,.4));">
+        <img src="assets/superette/hellokitty.png" alt=""
+             style="position:absolute;left:18%;top:4%;height:165px;width:auto;object-fit:contain;z-index:6;pointer-events:none;mix-blend-mode:multiply;transform:rotate(1.5deg);filter:drop-shadow(-5px 5px 10px rgba(0,0,0,.4));">
+
+        <!-- Poster côté bimbo (droite) -->
+        <img src="assets/superette/bettyboop.png" alt=""
+             style="position:absolute;right:18%;top:2%;height:170px;width:auto;object-fit:contain;z-index:6;pointer-events:none;mix-blend-mode:multiply;transform:rotate(-1deg);filter:drop-shadow(-5px 5px 10px rgba(0,0,0,.4));">
+
+        <!-- Plante -->
+        <img src="assets/superette/plante.png" alt=""
+             style="position:absolute;left:-10%;bottom:0;height:90%;width:auto;object-fit:contain;z-index:5;pointer-events:none;filter:drop-shadow(-6px 5px 14px rgba(0,0,0,.45)) drop-shadow(-2px 3px 6px rgba(0,0,0,.25));">
+        <img src="assets/bimbo.png" alt="Personnage Lili Sheppard - Ma Bimbo"
+             style="position:absolute;right:3%;bottom:0;height:80%;width:auto;object-fit:contain;z-index:10;pointer-events:none;"
+             onerror="this.style.display='none'">
+
+      </div><!-- /sup-scene -->
+    </div><!-- /superette-view -->
+
+    </div><!-- /main -->
+  </div><!-- /body-area -->
+
+  <!-- MODAL SUPÉRETTE -->
+  <div class="sup-modal-overlay" id="supModalOverlay" onclick="closeSupModal(event)">
+    <div class="sup-modal" id="supModal">
+      <button class="sup-modal-close" onclick="closeSupModal()">✕</button>
+      <img class="sup-modal-img" id="supModalImg" src="" alt="">
+      <div class="sup-modal-content">
+        <div class="sup-modal-title" id="supModalTitle"></div>
+        <div class="sup-modal-tags" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;" id="supModalTags"></div>
+        <div class="sup-modal-desc" id="supModalDesc"></div>
+        <button class="sup-modal-btn" onclick="closeSupModal()">♥ fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RÉPONDEUR MODAL -->
+  <div class="rep-overlay" id="repOverlay" onclick="closeRepondeurOutside(event)">
+    <div class="rep-modal" id="repModal">
+      <div class="rep-header">
+        <span class="rep-title">&#128222; Répondeur de Lili</span>
+        <button class="rep-close" onclick="closeRepondeur()">✕</button>
+      </div>
+      <div class="rep-screen" id="repScreen">
+        <div class="rep-msg rep-msg-bot">
+          <span>Bip bip ! Vous êtes bien sur le répondeur de Lili ✦ Posez-moi une question sur son parcours !</span>
+        </div>
+      </div>
+      <div class="rep-input-row">
+        <input class="rep-input" id="repInput" type="text" placeholder="Tapez votre question…" onkeydown="if(event.key==='Enter')sendRep()">
+        <button class="rep-send" onclick="sendRep()">&#9658;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Lili Sheppard, portfolio virtuel de mode ! – Une réalisation personnelle ·
+    <span class="footer-links">
+      <a onclick="turnPage('index')">Accueil</a> –
+      <a onclick="turnPage('competences')">Compétences</a> –
+      <a onclick="turnPage('projets')">Projets</a> –
+      <a onclick="turnPage('formation')">Formation</a> –
+      <a onclick="turnPage('experiences')">Expériences</a> –
+      <a onclick="turnPage('contact')">Contact</a>
+    </span>
+    <br>portfolio – Business Analytics – Marketing Digital – Paris – jeu virtuel de mode
+  </div>
+
+</div><!-- /wrapper -->
+
+<!-- POPUP -->
+<div class="s-overlay" id="popupOverlay" onclick="closePopup(event)">
+  <div class="s-popup" id="popupBox">
+    <button class="sp-close" onclick="closePopup()">✕</button>
+    <div class="pop-visual" id="popVisual"></div>
+    <div class="pop-title-row">
+      <div class="sp-popup-title" id="popTitle"></div>
+      <span class="pop-featured-badge" id="popFeatured" style="display:none">FEATURED ★</span>
+    </div>
+    <div class="sp-popup-desc" id="popDesc"></div>
+    <div class="pop-meta">
+      <div class="pop-meta-line">✦ <strong>Tech :</strong> <span id="popTechLine"></span></div>
+      <div class="pop-meta-line">★ <strong>Année :</strong> <span id="popYear"></span></div>
+    </div>
+    <div class="sp-popup-tech" id="popTech"></div>
+    <div class="sp-popup-footer">
+      <div class="sp-popup-price" id="popPrice"></div>
+      <button class="sp-popup-cta" onclick="closePopup()">✦ Fermer</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMissions(card) {
+  const m = card.querySelector('.cc-missions');
+  const t = card.querySelector('.cc-toggle');
+  const isOpen = m.classList.toggle('open');
+  t.textContent = isOpen ? '✦ masquer les missions' : '♥ voir les missions';
+}
+
+function turnPage(sectionId) {
+  showSection(sectionId);
+}
+
+function showSection(id) {
+  document.querySelectorAll('.sect').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById('sect-' + id);
+  if (target) target.classList.add('active');
+}
+
+function goTab(tabEl, sectionId) {
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  tabEl.classList.add('active');
+  document.getElementById('home-view').style.display = 'flex';
+  document.getElementById('superette-view').style.display = 'none';
+  turnPage(sectionId);
+}
+
+function openSuperette(tabEl) {
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  tabEl.classList.add('active');
+  document.getElementById('home-view').style.display = 'none';
+  document.getElementById('superette-view').style.display = 'flex';
+}
+
+const PROJECTS = {
+  hackathon:{emoji:'★',vis:'pop-vis-data',featured:true,title:'Talent Intelligence System',desc:'Hackathon Mirakl × Eugenia School 2026. Rôle : CPO (Produit & delivery). Système de sourcing automatique de talents tech : scraping LinkedIn, GitHub et Kaggle, scoring IA 0–100, veille concurrentielle sur 12 entreprises. 7 293 profils collectés. Stack à 126€/mois, 10× moins cher que Greenhouse.',tech:['n8n','Phantombuster','OpenAI','Python','Google Sheets','Dust'],annee:'2026',prix:'35 BO'},
+  fbi:{emoji:'★',vis:'pop-vis-data',featured:false,title:'Analyse des Profils de Fugitifs FBI',desc:'Scraping de 439 profils de fugitifs via Crawl4AI + développement d\'un chatbot FBI Criminal Profiler. Data Science appliquée à la criminologie.',tech:['Python','Crawl4AI','LLM / IA','Web Scraping'],annee:'2024',prix:'30 BO'},
+  michi:{emoji:'♥',vis:'pop-vis-mkt',featured:false,title:'Michi — Le Match qui Fait du Bien',desc:'Pitch deck complet d\'une startup de matching patient-psychologue par IA. Étude de marché, positionnement et stratégie go-to-market.',tech:['Marketing Digital','Étude de marché','Stratégie startup','Pitch deck'],annee:'2024',prix:'25 BO'},
+  commpol:{emoji:'✦',vis:'pop-vis-res',featured:false,title:'Influence, Défiance & Engagement',desc:'Mémoire de recherche sur la Gen Z et la communication politique. 147 répondants, analyse statistique complète des comportements politiques.',tech:['Recherche quantitative','Analyse statistique','Communication politique'],annee:'2023',prix:'20 BO'},
+  converse:{emoji:'✿',vis:'pop-vis-brand',featured:true,title:'Converse Remastered',desc:'Audit marketing complet + stratégie de reconquête de la Gen Z. 206 répondants, 8 interviews qualitatives, recommandations brand strategy.',tech:['Brand Strategy','Audit Marketing','206 répondants','8 interviews'],annee:'2023',prix:'22 BO'}
+};
+
+function filterShelf(cat, iconEl) {
+  document.querySelectorAll('.shelf-cat-icon').forEach(i => i.classList.remove('active'));
+  if (iconEl) iconEl.classList.add('active');
+  document.querySelectorAll('.shelf-product').forEach(prod => {
+    prod.style.display = (cat === 'all' || prod.dataset.shelfCat === cat) ? '' : 'none';
+  });
+}
+function filterShelfByCat(cat) {
+  filterShelf(cat, document.querySelector('.shelf-cat-icon.ci-' + (cat === 'all' ? 'all' : cat)));
+}
+
+function addToCart(btn) {
+  const count = document.getElementById('basketCount');
+  count.textContent = parseInt(count.textContent) + 1;
+  const orig = btn.textContent;
+  btn.textContent = '✓';
+  if (btn.classList.contains('shelf-prod-btn')) btn.classList.add('added');
+  setTimeout(() => { btn.textContent = orig; btn.classList.remove('added'); }, 1800);
+}
+
+function openPopup(key) {
+  const p = PROJECTS[key];
+  if (!p) return;
+  const vis = document.getElementById('popVisual');
+  vis.className = 'pop-visual ' + p.vis;
+  vis.textContent = p.emoji;
+  document.getElementById('popTitle').textContent = p.title;
+  document.getElementById('popDesc').textContent = p.desc;
+  document.getElementById('popTech').innerHTML = p.tech.map(t => `<span class="sp-popup-badge">${t}</span>`).join('');
+  document.getElementById('popTechLine').textContent = p.tech.join(' · ');
+  document.getElementById('popYear').textContent = p.annee;
+  document.getElementById('popPrice').textContent = p.prix;
+  const feat = document.getElementById('popFeatured');
+  feat.style.display = p.featured ? 'inline-block' : 'none';
+  document.getElementById('popupOverlay').classList.add('open');
+}
+
+function closePopup(e) {
+  if (!e || e.target === document.getElementById('popupOverlay')) {
+    document.getElementById('popupOverlay').classList.remove('open');
+  }
+}
+
+document.addEventListener('click', function(e) {
+  const chars = ['★','✦','✧','♥','✿'];
+  const cols  = ['#FFD700','#FF69B4','#FF1493','#d63060','#fff'];
+  for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+      const s = document.createElement('span');
+      s.className = 'sparkle';
+      s.style.cssText = `font-size:${10+Math.random()*12}px;left:${e.clientX+(Math.random()-.5)*48}px;top:${e.clientY+(Math.random()-.5)*48}px;color:${cols[Math.floor(Math.random()*cols.length)]};`;
+      s.textContent = chars[Math.floor(Math.random()*chars.length)];
+      document.body.appendChild(s);
+      setTimeout(() => s.remove(), 1200);
+    }, i * 65);
+  }
+});
+
+  /* ── SUPÉRETTE IMAGE MODAL ── */
+  const SUP_PRODUCTS = {
+    fbi:{
+      img:'assets/superette/folder.png',
+      title:'Analyse des Profils de Fugitifs FBI',
+      tags:['Python','Crawl4AI','SQL','LLM / IA','Web Scraping','Data Viz'],
+      desc:'Scraping et analyse de 439 profils de fugitifs du FBI via Crawl4AI. Construction d\'une base de données structurée (Python + SQL) et développement d\'un chatbot FBI Criminal Profiler capable de répondre à des questions sur les profils criminels. Visualisation des patterns géographiques, démographiques et comportementaux. Application concrète de la data science à la criminologie.'
+    },
+    memoire:{
+      img:'assets/superette/magazine.png',
+      title:'Influence, Défiance & Engagement — Gen Z & Politique',
+      tags:['Communication politique','Recherche quantitative','147 répondants','Gen Z','Analyse statistique'],
+      desc:'Mémoire de fin d\'études sur l\'influence de la communication politique numérique sur l\'engagement de la Génération Z. Enquête quantitative auprès de 147 répondants, analyse statistique des comportements politiques sur les réseaux sociaux. Étude des leviers d\'influence, de défiance et de mobilisation chez les 18–25 ans.'
+    },
+    michi:{
+      img:'assets/superette/medecine.png',
+      title:'Michi — Le Match qui Fait du Bien',
+      tags:['Marketing Digital','Startup SaaS','IA','Étude de marché','Go-to-market','Pitch deck'],
+      desc:'Pitch complet d\'une startup SaaS de mise en relation patient–psychologue via agent IA conversationnel. Modèle économique à 50€/mois. Étude de marché approfondie, analyse concurrentielle (Moka Care, Doctolib), positionnement différenciateur et stratégie go-to-market complète. Pitch deck présenté devant jury.'
+    },
+    converse:{
+      img:'assets/superette/shoebox.png',
+      title:'Converse Remastered — Brand Strategy',
+      tags:['Brand Strategy','Audit Marketing','PESTEL','206 répondants','8 interviews','Gen Z'],
+      desc:'Audit marketing stratégique de Converse face à une perte d\'attractivité Gen Z. Méthodologie mixte : questionnaire quantitatif (206 répondants) + 8 entretiens qualitatifs. Analyse PESTEL, audit de marque, cartographie concurrentielle (Vans, New Balance). Recommandations : repositionnement streetwear rock intergénérationnel, ligne capsule et activation micro-influence.'
+    },
+    mirakl:{
+      img:'assets/superette/magnifying-glass.png',
+      title:'Hackathon Mirakl × Eugenia — Talent Intelligence System',
+      tags:['n8n','Phantombuster','OpenAI','Python','IA / ML','RH Tech','CPO','Hackathon 2026'],
+      desc:'Hackathon Mirakl × Eugenia School 2026. Rôle : CPO — product strategy, delivery et roadmap. Système de sourcing automatisé de talents tech via scraping LinkedIn, GitHub et Kaggle (n8n + Phantombuster). Scoring IA 0–100, veille concurrentielle sur 12 entreprises. 7 293 profils collectés. Stack complète à 126€/mois — 10× moins cher que Greenhouse.'
+    }
+  };
+
+  function openSupModal(key){
+    const p = SUP_PRODUCTS[key];
+    if(!p) return;
+    document.getElementById('supModalImg').src = p.img;
+    document.getElementById('supModalImg').alt = p.title;
+    document.getElementById('supModalTitle').textContent = p.title;
+    document.getElementById('supModalTags').innerHTML = p.tags.map(t => `<span class="sup-modal-tag">${t}</span>`).join('');
+    document.getElementById('supModalDesc').textContent = p.desc;
+    document.getElementById('supModalOverlay').classList.add('open');
+  }
+
+  function closeSupModal(e){
+    if(!e || e.target === document.getElementById('supModalOverlay')){
+      document.getElementById('supModalOverlay').classList.remove('open');
+    }
+  }
+
+  /* ── RÉPONDEUR ── */
+  const REP_KB = [
+    {
+      keys: ['2020','2021','biocoop'],
+      rep: "En 2020–2022, Lili était Vendeuse chez Biocoop (avr 2020 – août 2022) ✦"
+    },
+    {
+      keys: ['2022','carrefour','category manager'],
+      rep: "En 2022–2023, Lili était Assistante Category Manager chez Carrefour Massy (sep 2022 – sep 2023) ✦"
+    },
+    {
+      keys: ['2023','t&t','foods','cheffe de projet'],
+      rep: "Fin 2023 – mi 2024, Lili était Cheffe de projet digital junior chez T&T Foods (nov 2023 – juil 2024) ✦"
+    },
+    {
+      keys: ['2024','syrona','product marketing specialist'],
+      rep: "De sep 2024 à sep 2025, Lili était Junior Product Marketing Specialist chez Syrona ✦"
+    },
+    {
+      keys: ['2025','2026','licter','social listening','actuellement','maintenant','aujourd'],
+      rep: "Depuis sep 2025, Lili est Consultante Veille & Social Listening chez Licter, en alternance avec son MSc Architecte IA ♥"
+    },
+    {
+      keys: ['étude','études','formation','parcours','diplôme','diplome','scolarité','scolarite'],
+      rep: "Lili a 6 ans d'expérience et est actuellement en MSc Architecte IA à Eugenia School ✦"
+    },
+    {
+      keys: ['master actuel','msc','eugenia','architecte ia'],
+      rep: "Elle prépare un MSc Architecte IA à Eugenia School (Paris 10), 2025–2027, en alternance 4 jours entreprise / 1 jour école ♥"
+    },
+    {
+      keys: ['bachelor','licence','premier master','marketing digital','ppa','business school','mastère','mastere'],
+      rep: "Elle a un Mastère Marketing Digital (PPA Business School, 2023–2025) et un Bachelor Marketing (PPA, 2020–2023) ✦"
+    },
+    {
+      keys: ['bac','stmg','lycée','lycee','diagonale'],
+      rep: "Bac STMG, Lycée École Diagonale, Paris (2018–2020) ★"
+    },
+    {
+      keys: ['compétence','competence','skill','outil','logiciel','python','sql','powerbi','tableau','ia','marketing'],
+      rep: "Ses compétences : Python, SQL, PowerBI, Tableau, Marketing Digital, Product, IA ✦ Toute la liste en bas de la page d'accueil !"
+    },
+    {
+      keys: ['projet','projets','supérette','superette','hackathon','fbi','michi','converse'],
+      rep: "Elle a 5 projets à découvrir — rends-toi dans La Supérette pour les explorer ! ★"
+    },
+    {
+      keys: ['contact','linkedin','email','mail','message','joindre','écrire','ecrire'],
+      rep: "Pour la contacter, va dans La Boîte aux Lettres ♥ ou retrouve-la sur LinkedIn : linkedin.com/in/lili-sheppard-0801921a6"
+    },
+    {
+      keys: ['expérience','experience','travaillé','travaille','poste','entreprise','job','où','parcours pro'],
+      rep: "5 expériences : Licter · Social Listening (sep 2025–auj.) ★ Syrona · Product Marketing (sep 2024–sep 2025) · T&T Foods · digital (nov 2023–juil 2024) · Carrefour · Category Manager (sep 2022–sep 2023) · Biocoop · Vendeuse (avr 2020–août 2022) ✦"
+    },
+    {
+      keys: ['qui','elle','lili','c\'est','portrait'],
+      rep: "Lili Sheppard, MSc Architecte IA en alternance, passionnée de data, marketing digital et IA ♥ Parisienne, voile & aquarelle !"
+    }
+  ];
+
+  const REP_DEFAULT = "Bip ! Je ne réponds qu'aux questions sur le parcours de Lili ♥ Essaie : ses études, son master, ses compétences, ses projets…";
+
+  function openRepondeur(){
+    document.getElementById('repOverlay').classList.add('open');
+    document.getElementById('repInput').focus();
+  }
+  function closeRepondeur(){
+    document.getElementById('repOverlay').classList.remove('open');
+  }
+  function closeRepondeurOutside(e){
+    if(e.target === document.getElementById('repOverlay')) closeRepondeur();
+  }
+
+  function sendRep(){
+    const input = document.getElementById('repInput');
+    const q = input.value.trim();
+    if(!q) return;
+    addRepMsg(q, 'user');
+    input.value = '';
+    const lower = q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    let answer = REP_DEFAULT;
+    for(const entry of REP_KB){
+      if(entry.keys.some(k => lower.includes(k.normalize('NFD').replace(/[̀-ͯ]/g,'')))){
+        answer = entry.rep;
+        break;
+      }
+    }
+    setTimeout(() => addRepMsg(answer, 'bot'), 400);
+  }
+
+  function addRepMsg(text, who){
+    const screen = document.getElementById('repScreen');
+    const div = document.createElement('div');
+    div.className = 'rep-msg rep-msg-' + who;
+    const span = document.createElement('span');
+    span.textContent = text;
+    div.appendChild(span);
+    screen.appendChild(div);
+    screen.scrollTop = screen.scrollHeight;
+  }
+</script>
+
+<!-- Étoiles latérales -->
+<span class="deco-star deco-star-l1">☆</span>
+<span class="deco-star deco-star-l2">★</span>
+<span class="deco-star deco-star-l3">☆</span>
+<span class="deco-star deco-star-l4">✦</span>
+<span class="deco-star deco-star-r1">★</span>
+<span class="deco-star deco-star-r2">☆</span>
+<span class="deco-star deco-star-r3">✦</span>
+<span class="deco-star deco-star-r4">☆</span>
+
+<!-- Décorations overlay -->
+<img class="deco-overlay deco-sparkle-large" src="assets/deco/sparkle-large.png" alt="">
+<img class="deco-overlay deco-sparkle-small" src="assets/deco/sparkle-small.png" alt="">
+<img class="deco-overlay deco-heart-glow"    src="assets/deco/heart-glow.png"    alt="">
+<img class="deco-overlay deco-hearts-neon"   src="assets/deco/heart-neon.png"   alt="">
+<img class="deco-overlay deco-globe"         src="assets/deco/globe-pixel.png"   alt="">
+</body>
+</html>
